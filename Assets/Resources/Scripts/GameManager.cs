@@ -30,10 +30,10 @@ public class GameManager : MonoBehaviour {
 		}
 
 		//	for communication with music program
-		OSCHandler.Instance.Init ();
+		//OSCHandler.Instance.Init ();
 
 		//	a message of 0 turns the signal processing on
-		OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", 0);
+		//OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", 0);
 
 		//	player's number of sides 
 		//	start game with 5 sides
