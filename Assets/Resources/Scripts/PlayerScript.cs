@@ -20,11 +20,13 @@ using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
 
+	public static PlayerScript instance = null;
+
 	//	we can play with these 3 until we are happy!!!
 	//	rotation speed
 	float speed = 250;
 	//	number of sides
-	int numSides = 5;
+	private int numSides = 5;
 	//	force for pulses
 	float pulseForce = 10;
 
@@ -52,7 +54,18 @@ public class PlayerScript : MonoBehaviour {
 	//	color when player is deactivated (when numSides < 3)
 	//	still LOOKS like a triangle but it's out of pulses and inert
 	Color noRes = new Vector4(0.133f, 0.2f, 0.7f, 1.0f);
-	
+
+	void Awake()
+	{
+		//	set the instance value to self.
+		if (instance == null) {
+			instance = this;
+		} else if (instance != this) {
+			Destroy (gameObject);
+		}
+	}
+
+
 	// Update is called once per frame
 	void Update () {
 
@@ -80,7 +93,7 @@ public class PlayerScript : MonoBehaviour {
 		//	after the pulse has been sent, it grabs its number of sides from the GM 
 		//	(this is probably absurd but remember not only does sending a pulse affect the number of sides,
 		//	so does collecting the food/pearls)
-		numSides = GameManager.instance.GetNumSides ();
+		//numSides = GameManager.instance.GetNumSides ();
 
 		//	adjusts color to indicate if player is inert (has less than 3 sides and can not send pulses into the space)
 		if(numSides < 3)	//	NO PULSE!!!
@@ -112,25 +125,45 @@ public class PlayerScript : MonoBehaviour {
 	void ExecutePulse() {
 		
 		//print ("Pulse strength = " + (pulseForce/numSides));
-
 		if (numSides >= 6) {
 			Instantiate (hexPulse, transform.position, transform.rotation);
+			numSides = numSides - 1;
 			GameManager.instance.DecrementNumSides ();
-		}if (numSides == 5) {
+
+		}
+		else if (numSides == 5) {
 			Instantiate (pentPulse, transform.position, transform.rotation);
+			numSides = numSides - 1;
 			GameManager.instance.DecrementNumSides ();
-		} if (numSides == 4) {
+
+		}
+		else if (numSides == 4) {
 			//THIS IS AWESOME! YES BUT LIKE... NO!
 			//myPulse = Instantiate (sqrPulse, transform.position, transform.rotation) as GameObject;
 			//myPulse.transform.parent = transform;
 			Instantiate (sqrPulse, transform.position, transform.rotation);
+			numSides = numSides - 1;
+
 			GameManager.instance.DecrementNumSides ();
-		} if (numSides == 3) {
+
+		}
+		else if (numSides == 3) {
 			Instantiate (triPulse, transform.position, transform.rotation);
+			numSides = numSides - 1;
+
 			GameManager.instance.DecrementNumSides ();
-		} if (numSides < 3) {
+
+		}
+		else if (numSides < 3) {
 			//print ("no pulse");
 		}
+	}
+
+	public void setNumSides(int newNumSides)
+	{
+
+		numSides = newNumSides;
+
 	}
 
 }

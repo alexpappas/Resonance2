@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour {
 	//	decreases the number of sides the player has by 1
 	public void DecrementNumSides() {
 		numSides--;
-		SendNumSides (numSides);
+		//SendNumSides (numSides);
 	}
 
 	//	increases the number of sides the player has by 1
@@ -74,5 +74,7 @@ public class GameManager : MonoBehaviour {
 	//	sends the number of sides the player has to the music program
 	void SendNumSides(int x) {
 		//OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", x);
+		PlayerScript.instance.setNumSides(x);
+
 	}
 }
