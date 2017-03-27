@@ -14,12 +14,50 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
 	public static GameManager instance = null;
 
 	private int numSides;
+
+	private string[] stages;
+	public Button restart_button;
+	public Button pause_button;
+	public Button next_stage_button;
+
+	// Use this for initialization
+	void Start () {
+		stages = new string[] { "TestLevel", "Tutorial01", "Tutorial02", "Tutorial03", "Tutorial04" };
+	}
+
+	public void restart_button_click(){
+		Application.LoadLevel(Application.loadedLevel);
+	}
+
+	public void pause_button_click(){
+		if (Time.timeScale == 1)
+		{
+			Time.timeScale = 0;
+		}
+		else
+		{
+			Time.timeScale = 1;
+		}
+	}
+	public void next_stage_button_click(){
+		Scene scene = SceneManager.GetActiveScene();
+		int next = 0;
+		for (int i = 0; i < stages.Length; i++)
+		{
+			if (scene.name == stages[i]) {
+				next = i + 1;
+			}
+		}
+		SceneManager.LoadScene(stages[next], LoadSceneMode.Single);
+	}
+
 
 	void Awake () {	
 		//	create singleton instance of GameManager
