@@ -101,20 +101,6 @@ public class PlayerScript : MonoBehaviour {
 		else //	you are still resonanting and can still pulse
 			GetComponent<Renderer>().material.color = Color.white;
 
-		//	picks the appropriate sprite, to match numSides
-		//	if we're putting it in a separate method called by the Game Manager put this there too
-		//	that way it's only called when needed and not executed every frame!
-		if (numSides == 2)	//	you have less than 3 sides, but we don't wanna make you a line... so you're still a triangle
-			this.GetComponent<SpriteRenderer> ().sprite = sprite3;
-		if (numSides == 3)	//	you have 3 sides, you are a triangle
-			this.GetComponent<SpriteRenderer> ().sprite = sprite3;
-		if (numSides == 4)	//	you have 4 sides, you are a square
-			this.GetComponent<SpriteRenderer> ().sprite = sprite4;
-		if (numSides == 5)	//	pentagon
-			this.GetComponent<SpriteRenderer> ().sprite = sprite5;
-		if (numSides == 6)	//	hexagon
-			this.GetComponent<SpriteRenderer> ().sprite = sprite6;
-
 	}
 
 	//	this is called when the player presses the spacebar
@@ -138,9 +124,6 @@ public class PlayerScript : MonoBehaviour {
 
 		}
 		else if (numSides == 4) {
-			//THIS IS AWESOME! YES BUT LIKE... NO!
-			//myPulse = Instantiate (sqrPulse, transform.position, transform.rotation) as GameObject;
-			//myPulse.transform.parent = transform;
 			Instantiate (sqrPulse, transform.position, transform.rotation);
 			numSides = numSides - 1;
 
@@ -157,13 +140,33 @@ public class PlayerScript : MonoBehaviour {
 		else if (numSides < 3) {
 			//print ("no pulse");
 		}
+
+		//	after pulse resets appearance
+		SetSprite ();
+
 	}
 
 	public void setNumSides(int newNumSides)
 	{
 
 		numSides = newNumSides;
+		SetSprite ();
+	}
 
+	//	called anytime a pulse is output
+	//	or Game Manager increments the number of sides
+	//	picks the appropriate sprite, to match numSides
+	void SetSprite() {
+		if (numSides == 2)	//	you have less than 3 sides, but we don't wanna make you a line... so you're still a triangle
+			this.GetComponent<SpriteRenderer> ().sprite = sprite3;
+		if (numSides == 3)	//	you have 3 sides, you are a triangle
+			this.GetComponent<SpriteRenderer> ().sprite = sprite3;
+		if (numSides == 4)	//	you have 4 sides, you are a square
+			this.GetComponent<SpriteRenderer> ().sprite = sprite4;
+		if (numSides == 5)	//	pentagon
+			this.GetComponent<SpriteRenderer> ().sprite = sprite5;
+		if (numSides == 6)	//	hexagon
+			this.GetComponent<SpriteRenderer> ().sprite = sprite6;
 	}
 
 }
