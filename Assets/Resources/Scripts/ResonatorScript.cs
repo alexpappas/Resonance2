@@ -115,11 +115,20 @@ public class ResonatorScript : MonoBehaviour {
 	void ExecutePulse() {
 
 		if (numSides == 5) {
-			Instantiate (pentPulse, transform.position, transform.rotation);
+			GameObject s = Instantiate (pentPulse, transform.position, transform.rotation);
+			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
+				s.GetComponentsInChildren<Transform>()[i].name = "Resonator's Pulse";
+			}
 		} if (numSides == 4) {
-			Instantiate (sqrPulse, transform.position, transform.rotation);
+			GameObject s = Instantiate (sqrPulse, transform.position, transform.rotation);
+			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
+				s.GetComponentsInChildren<Transform>()[i].name = "Resonator's Pulse";
+			}
 		} if (numSides == 3) {
-			Instantiate (triPulse, transform.position, transform.rotation);
+			GameObject s = Instantiate (triPulse, transform.position, transform.rotation);
+			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
+				s.GetComponentsInChildren<Transform>()[i].name = "Resonator's Pulse";
+			}
 		}
 			
 		SendNumSides (numSides);

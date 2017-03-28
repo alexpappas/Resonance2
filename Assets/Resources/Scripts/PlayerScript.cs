@@ -112,28 +112,38 @@ public class PlayerScript : MonoBehaviour {
 		
 		//print ("Pulse strength = " + (pulseForce/numSides));
 		if (numSides >= 6) {
-			Instantiate (hexPulse, transform.position, transform.rotation);
+			GameObject s = Instantiate (hexPulse, transform.position, transform.rotation);
+			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
+				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
+			}
 			numSides = numSides - 1;
 			GameManager.instance.DecrementNumSides ();
 
 		}
 		else if (numSides == 5) {
-			Instantiate (pentPulse, transform.position, transform.rotation);
+			GameObject s = Instantiate (pentPulse, transform.position, transform.rotation);
+			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
+				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
+			}
 			numSides = numSides - 1;
 			GameManager.instance.DecrementNumSides ();
 
 		}
 		else if (numSides == 4) {
-			Instantiate (sqrPulse, transform.position, transform.rotation);
+			GameObject s = Instantiate (sqrPulse, transform.position, transform.rotation);
+			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
+				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
+			}
 			numSides = numSides - 1;
-
 			GameManager.instance.DecrementNumSides ();
 
 		}
 		else if (numSides == 3) {
-			Instantiate (triPulse, transform.position, transform.rotation);
+			GameObject s = Instantiate (triPulse, transform.position, transform.rotation);
+			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
+				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
+			}
 			numSides = numSides - 1;
-
 			GameManager.instance.DecrementNumSides ();
 
 		}

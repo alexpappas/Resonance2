@@ -63,5 +63,23 @@ public class PulseScript : MonoBehaviour {
 		float multiplier = transform.parent.GetComponent<PulseGroupScript> ().pulseMult;
 		rb.AddForce(transform.right * speed / multiplier);
 	}
+
+//	void OnTriggerEnter2D(Collider2D coll) {		
+//		if (coll.gameObject.name == "Player's Pulse" && this.gameObject.name == "Resonator's Pulse") {
+//			print (coll.gameObject.transform.right);
+//			print (this.gameObject.transform.right);
+//			float first_angle = Mathf.Atan2(coll.gameObject.transform.right.y, coll.gameObject.transform.right.x);
+//			float second_angle = Mathf.Atan2 (this.gameObject.transform.right.y, this.gameObject.transform.right.x);
+//			
+//			if (Mathf.Abs (first_angle - second_angle) < 1.2) { // That's about 68 degrees, whatever..
+//				float multiplier = transform.parent.GetComponent<PulseGroupScript> ().pulseMult;
+//				coll.attachedRigidbody.AddForce (transform.right * speed / multiplier);
+//				coll.gameObject.transform.localScale = new Vector3(0.2f, 0.8f, 1);
+//				coll.gameObject.name = "Boosted";
+//			}
+//		} else if (this.gameObject.name == "Player's Pulse" && coll.gameObject.name == "Resonator's Pulse") {
+//			
+//		}
+//	}
 		
 }
