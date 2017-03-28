@@ -57,3 +57,24 @@
 /Users/adriencogny/OneDrive/Documents/NYU Poly/Senior Year/S_2017/Game_Design/FinalProject/Resonance2/Temp/bin/Debug/Mono.Cecil.Mdb.dll
 /Users/adriencogny/OneDrive/Documents/NYU Poly/Senior Year/S_2017/Game_Design/FinalProject/Resonance2/Temp/bin/Debug/Assembly-CSharp.dll.mdb
 /Users/adriencogny/OneDrive/Documents/NYU Poly/Senior Year/S_2017/Game_Design/FinalProject/Resonance2/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/hallowmarshmallow/Documents/Unity/Resonance/obj/Debug/Assembly-CSharp.dll
+/Users/hallowmarshmallow/Documents/Unity/Resonance/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/hallowmarshmallow/Documents/Unity/Resonance/Temp/bin/Debug/UnityEngine.dll
+/Users/hallowmarshmallow/Documents/Unity/Resonance/Temp/bin/Debug/UnityEditor.dll
+/Users/hallowmarshmallow/Documents/Unity/Resonance/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/hallowmarshmallow/Documents/Unity/Resonance/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/hallowmarshmallow/Documents/Unity/Resonance/Temp/bin/Debug/UnityEngine.PlaymodeTestsRunner.dll
+/Users/hallowmarshmallow/Documents/Unity/Resonance/Temp/bin/Debug/UnityEngine.Analytics.dll
+/Users/hallowmarshmallow/Documents/Unity/Resonance/Temp/bin/Debug/UnityEngine.HoloLens.dll
+/Users/hallowmarshmallow/Documents/Unity/Resonance/Temp/bin/Debug/UnityEngine.VR.dll
+/Users/hallowmarshmallow/Documents/Unity/Resonance/Temp/bin/Debug/Mono.Cecil.dll
+/Users/hallowmarshmallow/Documents/Unity/Resonance/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/hallowmarshmallow/Documents/Unity/Resonance/Temp/bin/Debug/Unity.DataContract.dll
+/Users/hallowmarshmallow/Documents/Unity/Resonance/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/hallowmarshmallow/Documents/Unity/Resonance/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/hallowmarshmallow/Documents/Unity/Resonance/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/hallowmarshmallow/Documents/Unity/Resonance/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/hallowmarshmallow/Documents/Unity/Resonance/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/hallowmarshmallow/Documents/Unity/Resonance/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/hallowmarshmallow/Documents/Unity/Resonance/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/hallowmarshmallow/Documents/Unity/Resonance/Temp/bin/Debug/Assembly-CSharp.dll

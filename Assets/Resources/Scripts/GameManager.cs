@@ -23,9 +23,6 @@ public class GameManager : MonoBehaviour {
 	private int numSides;
 
 	private string[] stages;
-	public Button restart_button;
-	public Button pause_button;
-	public Button next_stage_button;
 
 	// Use this for initialization
 	void Start () {
@@ -37,15 +34,14 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void pause_button_click(){
-		if (Time.timeScale == 1)
-		{
+		if (Time.timeScale == 1) {
 			Time.timeScale = 0;
 		}
-		else
-		{
+		else{
 			Time.timeScale = 1;
 		}
 	}
+
 	public void next_stage_button_click(){
 		Scene scene = SceneManager.GetActiveScene();
 		int next = 0;
