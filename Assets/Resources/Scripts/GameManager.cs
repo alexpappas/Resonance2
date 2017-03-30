@@ -24,9 +24,11 @@ public class GameManager : MonoBehaviour {
 
 	private string[] stages;
 
+	private bool levelComplete;
+
 	// Use this for initialization
 	void Start () {
-		stages = new string[] { "TestLevel", "Tutorial01", "Tutorial02", "Tutorial03", "Tutorial04" };
+		stages = new string[] { "TitleScreen", "Tutorial01", "Tutorial02", "Tutorial01c", "Tutorial01d", "Tutorial04", "Tutorial05", "Level01", "Level02" };
 	}
 
 	public void restart_button_click(){
@@ -52,6 +54,7 @@ public class GameManager : MonoBehaviour {
 			}
 		}
 		SceneManager.LoadScene(stages[next], LoadSceneMode.Single);
+		levelComplete = false;
 	}
 
 
@@ -91,7 +94,7 @@ public class GameManager : MonoBehaviour {
 	//	decreases the number of sides the player has by 1
 	public void DecrementNumSides() {
 		numSides--;
-		//SendNumSides (numSides);
+		SendNumSides (numSides);
 	}
 
 	//	increases the number of sides the player has by 1
@@ -110,5 +113,11 @@ public class GameManager : MonoBehaviour {
 		//OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", x);
 		PlayerScript.instance.setNumSides(x);
 
+	}
+
+	public void GoalReached() {
+		levelComplete = true;
+		GameObject nextButton = GameObject.Find ("Next");
+		nextButton.GetComponent<Button> ().interactable = true;
 	}
 }
