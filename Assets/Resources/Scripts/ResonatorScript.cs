@@ -131,7 +131,8 @@ public class ResonatorScript : MonoBehaviour {
 			}
 		}
 			
-		SendNumSides (numSides);
+		//	when resonator pulses, sends number of sides to audio manager
+		AudioManager.instance.ResonatorPulse (numSides);
 
 		pulsesRemaining--;
 
@@ -140,7 +141,7 @@ public class ResonatorScript : MonoBehaviour {
 		//	the area of the sprite behind it increases
 		//	these are the growing colored areas that radiate out from the resonators
 		//	this is the thing that i may not include in the future
-		resonArea.transform.localScale *= 2;
+		//resonArea.transform.localScale *= 2;
 
 		//print ("I have " + numSides + " sides : " + pulsesRemaining);
 
@@ -165,9 +166,4 @@ public class ResonatorScript : MonoBehaviour {
 		}
 	}
 
-	//	sends its identity to the music program
-	//	each resonator makes a different sound when it pulses depending on its shape
-	void SendNumSides(int x) {
-		//OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", x);
-	}
 }

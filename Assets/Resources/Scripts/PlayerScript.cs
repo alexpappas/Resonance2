@@ -104,7 +104,7 @@ public class PlayerScript : MonoBehaviour {
 	}
 
 	//	this is called when the player presses the spacebar
-	//	it instantiates a one of the pulse prefabs based on the number of sides of the object
+	//	it instantiates one of the pulse prefabs based on the number of sides of the object
 	//	(if numSides is 5 it will instantiate the pentPulse prefab)
 	//	(if numSides is 4 it will instantiate the sqrPulse prefab)
 	//	(if it has fewer than 3 sides it will not pulse
@@ -114,7 +114,9 @@ public class PlayerScript : MonoBehaviour {
 		if (numSides >= 6) {
 			GameObject s = Instantiate (hexPulse, transform.position, transform.rotation);
 			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
-				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
+				if (s.GetComponentsInChildren<Transform> () [i].CompareTag ("pulse")) {
+					s.GetComponentsInChildren<Transform> () [i].name = "Player's Pulse";
+				}
 			}
 			numSides = numSides - 1;
 			GameManager.instance.DecrementNumSides ();
@@ -123,7 +125,9 @@ public class PlayerScript : MonoBehaviour {
 		else if (numSides == 5) {
 			GameObject s = Instantiate (pentPulse, transform.position, transform.rotation);
 			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
-				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
+				if (s.GetComponentsInChildren<Transform> () [i].CompareTag ("pulse")) {
+					s.GetComponentsInChildren<Transform> () [i].name = "Player's Pulse";
+				}
 			}
 			numSides = numSides - 1;
 			GameManager.instance.DecrementNumSides ();
@@ -132,7 +136,9 @@ public class PlayerScript : MonoBehaviour {
 		else if (numSides == 4) {
 			GameObject s = Instantiate (sqrPulse, transform.position, transform.rotation);
 			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
-				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
+				if (s.GetComponentsInChildren<Transform> () [i].CompareTag ("pulse")) {
+					s.GetComponentsInChildren<Transform> () [i].name = "Player's Pulse";
+				}
 			}
 			numSides = numSides - 1;
 			GameManager.instance.DecrementNumSides ();
@@ -141,7 +147,9 @@ public class PlayerScript : MonoBehaviour {
 		else if (numSides == 3) {
 			GameObject s = Instantiate (triPulse, transform.position, transform.rotation);
 			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
-				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
+				if (s.GetComponentsInChildren<Transform> () [i].CompareTag ("pulse")) {
+					s.GetComponentsInChildren<Transform> () [i].name = "Player's Pulse";
+				}
 			}
 			numSides = numSides - 1;
 			GameManager.instance.DecrementNumSides ();

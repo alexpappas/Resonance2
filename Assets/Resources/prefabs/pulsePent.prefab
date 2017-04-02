@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5026456}
   m_Layer: 0
   m_Name: pulse (1)
-  m_TagString: Untagged
+  m_TagString: pulse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,7 +33,7 @@ GameObject:
   - component: {fileID: 5040172}
   m_Layer: 0
   m_Name: pulse (2)
-  m_TagString: Untagged
+  m_TagString: pulse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,7 +68,7 @@ GameObject:
   - component: {fileID: 5000122}
   m_Layer: 0
   m_Name: pulse
-  m_TagString: Untagged
+  m_TagString: pulse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 5026206}
   m_Layer: 0
   m_Name: pulse (4)
-  m_TagString: Untagged
+  m_TagString: pulse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 5073974}
   m_Layer: 0
   m_Name: pulse (3)
-  m_TagString: Untagged
+  m_TagString: pulse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -376,6 +376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorStart: {r: 1, g: 1, b: 1, a: 1}
+  playerPulse: 0
 --- !u!114 &11460260
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -388,6 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorStart: {r: 1, g: 1, b: 1, a: 1}
+  playerPulse: 0
 --- !u!114 &11472012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -412,6 +414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorStart: {r: 1, g: 1, b: 1, a: 1}
+  playerPulse: 0
 --- !u!114 &11486228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -424,6 +427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorStart: {r: 1, g: 1, b: 1, a: 1}
+  playerPulse: 0
 --- !u!114 &11490768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -436,6 +440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorStart: {r: 1, g: 1, b: 1, a: 1}
+  playerPulse: 0
 --- !u!212 &21211214
 SpriteRenderer:
   m_ObjectHideFlags: 1

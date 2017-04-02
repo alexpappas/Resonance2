@@ -26,9 +26,8 @@ public class GameManager : MonoBehaviour {
 
 	private bool levelComplete;
 
-	// Use this for initialization
 	void Start () {
-		stages = new string[] { "TitleScreen", "Tutorial01", "Tutorial02", "Tutorial01c", "Tutorial01d", "Tutorial04", "Tutorial05", "Level01", "Level02" };
+		stages = new string[] { "TitleScreen", "Tutorial01", "Tutorial02", "Tutorial02a", "Tutorial01c", "Tutorial01d", "Tutorial04", "Tutorial05", "Level01", "Level02" };
 	}
 
 	public void restart_button_click(){
@@ -65,29 +64,13 @@ public class GameManager : MonoBehaviour {
 		} else if (instance != this) {
 			Destroy (gameObject);
 		}
-
-		//	for communication with music program
-		//OSCHandler.Instance.Init ();
-
-		//	a message of 0 turns the signal processing on
-		//OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", 0);
+			
+		//	instantiates AudioManager
+		Instantiate(Resources.Load("prefabs/AudioManager"));
 
 		//	player's number of sides 
 		//	start game with 5 sides
 		numSides = 5;
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-		//	press Tab to resart a scene
-		if (Input.GetKeyDown (KeyCode.Tab)) {
-			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-		}
-
-		//	in later weeks we will have a UI that allows the user to restart levels and stuff...
-		//	and we'll get rid of Tab
 
 	}
 
@@ -110,7 +93,7 @@ public class GameManager : MonoBehaviour {
 
 	//	sends the number of sides the player has to the music program
 	void SendNumSides(int x) {
-		//OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", x);
+		AudioManager.instance.PlayerPulse (numSides);
 		PlayerScript.instance.setNumSides(x);
 
 	}
@@ -118,6 +101,7 @@ public class GameManager : MonoBehaviour {
 	public void GoalReached() {
 		levelComplete = true;
 		GameObject nextButton = GameObject.Find ("Next");
+		nextButton.SetActive (true);
 		nextButton.GetComponent<Button> ().interactable = true;
 	}
 }

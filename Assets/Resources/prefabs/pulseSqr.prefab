@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5077238}
   m_Layer: 0
   m_Name: pulse (1)
-  m_TagString: Untagged
+  m_TagString: pulse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,7 +33,7 @@ GameObject:
   - component: {fileID: 5060520}
   m_Layer: 0
   m_Name: pulse (3)
-  m_TagString: Untagged
+  m_TagString: pulse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +52,7 @@ GameObject:
   - component: {fileID: 5087164}
   m_Layer: 0
   m_Name: pulse
-  m_TagString: Untagged
+  m_TagString: pulse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 5053722}
   m_Layer: 0
   m_Name: pulse (2)
-  m_TagString: Untagged
+  m_TagString: pulse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

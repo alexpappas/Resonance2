@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5037698}
   m_Layer: 0
   m_Name: pulse (2)
-  m_TagString: Untagged
+  m_TagString: pulse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,7 +33,7 @@ GameObject:
   - component: {fileID: 5087944}
   m_Layer: 0
   m_Name: pulse
-  m_TagString: Untagged
+  m_TagString: pulse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,7 +68,7 @@ GameObject:
   - component: {fileID: 5074884}
   m_Layer: 0
   m_Name: pulse (1)
-  m_TagString: Untagged
+  m_TagString: pulse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -254,6 +254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorStart: {r: 1, g: 1, b: 1, a: 1}
+  playerPulse: 0
 --- !u!114 &11454286
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -266,6 +267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorStart: {r: 1, g: 1, b: 1, a: 1}
+  playerPulse: 0
 --- !u!114 &11466726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -278,6 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorStart: {r: 1, g: 1, b: 1, a: 1}
+  playerPulse: 0
 --- !u!212 &21246176
 SpriteRenderer:
   m_ObjectHideFlags: 1

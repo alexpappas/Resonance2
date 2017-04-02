@@ -23,3 +23,7 @@ EditorBuildSettings:
     path: Assets/Resources/Scenes/Tutorial01c.unity
   - enabled: 1
     path: Assets/Resources/Scenes/Tutorial05.unity
+  - enabled: 1
+    path: Assets/Resources/Scenes/Tutorial02a.unity
+  - enabled: 1
+    path: Assets/Resources/Scenes/Tutorial06.unity

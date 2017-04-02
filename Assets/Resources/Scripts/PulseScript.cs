@@ -28,8 +28,15 @@ public class PulseScript : MonoBehaviour {
 
 	public Color colorStart = Color.white;
 
-	// Use this for initialization
 	void Start () {
+
+		//	sets appearance of pulse based off if it was created by player or not
+		if (name == "Player's Pulse") {
+			GetComponent<SpriteRenderer> ().sprite = Resources.Load ("Sprites/pulse", typeof(Sprite)) as Sprite;
+		} else {
+			GetComponent<SpriteRenderer> ().sprite = Resources.Load ("Sprites/pulse2", typeof(Sprite)) as Sprite;
+		}
+
 		rb = GetComponent<Rigidbody2D> ();
 
 		//	when it is instantiated (as a part of a pulse group) by the PlayerScript it starts moving outward
@@ -38,7 +45,8 @@ public class PulseScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//	the color starts as white but as the pulse slows down it becomes more transparent
+		
+		//	the color starts white but as the pulse slows down it becomes more transparent
 		colorStart.a = Mathf.Abs (rb.velocity.magnitude);
 		GetComponent<Renderer>().material.color = colorStart;
 
@@ -61,6 +69,7 @@ public class PulseScript : MonoBehaviour {
 		//	this pulseMult is dependent on shape
 		//	pulse groups with fewer sides travel farther than those with more
 		float multiplier = transform.parent.GetComponent<PulseGroupScript> ().pulseMult;
+		//transform.localScale = new Vector3 (multiplier/10, .4f, .1f);
 		rb.AddForce(transform.right * speed / multiplier);
 	}
 

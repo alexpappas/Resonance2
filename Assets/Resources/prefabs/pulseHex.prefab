@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5037700}
   m_Layer: 0
   m_Name: pulse
-  m_TagString: Untagged
+  m_TagString: pulse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,7 +33,7 @@ GameObject:
   - component: {fileID: 5034294}
   m_Layer: 0
   m_Name: pulse (3)
-  m_TagString: Untagged
+  m_TagString: pulse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +52,7 @@ GameObject:
   - component: {fileID: 5090966}
   m_Layer: 0
   m_Name: pulse (1)
-  m_TagString: Untagged
+  m_TagString: pulse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 5098246}
   m_Layer: 0
   m_Name: pulse
-  m_TagString: Untagged
+  m_TagString: pulse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 5035044}
   m_Layer: 0
   m_Name: pulse (2)
-  m_TagString: Untagged
+  m_TagString: pulse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 5056834}
   m_Layer: 0
   m_Name: pulse (4)
-  m_TagString: Untagged
+  m_TagString: pulse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -443,6 +443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorStart: {r: 1, g: 1, b: 1, a: 1}
+  playerPulse: 0
 --- !u!114 &11436246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -467,6 +468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorStart: {r: 1, g: 1, b: 1, a: 1}
+  playerPulse: 0
 --- !u!114 &11466820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -479,6 +481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorStart: {r: 1, g: 1, b: 1, a: 1}
+  playerPulse: 0
 --- !u!114 &11470746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -491,6 +494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorStart: {r: 1, g: 1, b: 1, a: 1}
+  playerPulse: 0
 --- !u!114 &11483332
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -503,6 +507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorStart: {r: 1, g: 1, b: 1, a: 1}
+  playerPulse: 0
 --- !u!114 &11498462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -515,6 +520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorStart: {r: 1, g: 1, b: 1, a: 1}
+  playerPulse: 0
 --- !u!212 &21202366
 SpriteRenderer:
   m_ObjectHideFlags: 1
