@@ -24,7 +24,7 @@ public class PlayerScript : MonoBehaviour {
 
 	//	we can play with these 3 until we are happy!!!
 	//	rotation speed
-	float speed = 250;
+	float speed = 100;
 	//	number of sides
 	private int numSides = 5;
 	//	force for pulses
@@ -100,6 +100,18 @@ public class PlayerScript : MonoBehaviour {
 			GetComponent<Renderer>().material.color = noRes;
 		else //	you are still resonanting and can still pulse
 			GetComponent<Renderer>().material.color = Color.white;
+
+
+
+		//remove all lines
+
+
+		//Create the aiming lines
+		for (int i = 0; i < numSides; i++)
+		{
+			
+			<LineRenderer> curLineRenderer = gameObject.AddComponent<LineRenderer>();
+		}
 
 	}
 
