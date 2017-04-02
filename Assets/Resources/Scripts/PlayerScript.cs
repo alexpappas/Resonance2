@@ -110,7 +110,7 @@ public class PlayerScript : MonoBehaviour {
 		for (int i = 0; i < numSides; i++)
 		{
 			
-			<LineRenderer> curLineRenderer = gameObject.AddComponent<LineRenderer>();
+			//<LineRenderer> curLineRenderer = gameObject.AddComponent<LineRenderer>();
 		}
 
 	}
