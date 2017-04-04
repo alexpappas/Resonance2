@@ -25,6 +25,7 @@ public class PlayerScript : MonoBehaviour {
 	//	we can play with these 3 until we are happy!!!
 	//	rotation speed
 	float speed = 100; //changed the player speed to 100 to slow down rotations.
+
 	//	number of sides
 	private int numSides = 5;
 	//	force for pulses
