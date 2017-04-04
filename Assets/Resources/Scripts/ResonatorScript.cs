@@ -28,6 +28,7 @@ using System.Collections;
 
 public class ResonatorScript : MonoBehaviour {
 
+
 	//	what shape the resonator is
 	public int numSides;
 
@@ -61,7 +62,7 @@ public class ResonatorScript : MonoBehaviour {
 	int pulsesRemaining;
 
 	void Start () {
-		
+
 		//	nothing is resonating on start
 		isResonating = false;
 		hasBeenActivated = false;
@@ -80,11 +81,10 @@ public class ResonatorScript : MonoBehaviour {
 		//	and if that pentagon is rotating it turns off
 		//	if people like it this week this is our next big project
 		//	that i'm really gonna need you're help with!
-		if (this.GetComponentInParent<BigRotation> () == null) {
+		if (this.GetComponentInParent<PappasBigRotate> () == null) {
 			//print ("AH");
-		} else if (this.GetComponentInParent<BigRotation> ().isRotating) {
+		} else if (this.GetComponentInParent<PappasBigRotate> ().isRotating) {
 			isResonating = false;
-			hasBeenActivated = false;
 			SetMyColor ();
 			CancelInvoke ("ExecutePulse");
 		}
@@ -92,6 +92,10 @@ public class ResonatorScript : MonoBehaviour {
 
 	//	I HAVE BEEN ACTIVATED BY ANOTHER PULSE!
 	void OnTriggerEnter2D(Collider2D coll) {
+
+		if (!hasBeenActivated) {
+			GoalReached.count_of_activated_resonators++;
+		}
 
 		hasBeenActivated = true;
 			//	I was OFF and now I am ON
@@ -132,8 +136,7 @@ public class ResonatorScript : MonoBehaviour {
 			}
 		}
 			
-		//	when resonator pulses, sends number of sides to audio manager
-		AudioManager.instance.ResonatorPulse (numSides);
+		SendNumSides (numSides);
 
 		pulsesRemaining--;
 
@@ -142,7 +145,7 @@ public class ResonatorScript : MonoBehaviour {
 		//	the area of the sprite behind it increases
 		//	these are the growing colored areas that radiate out from the resonators
 		//	this is the thing that i may not include in the future
-		//resonArea.transform.localScale *= 2;
+		resonArea.transform.localScale *= 2;
 
 		//print ("I have " + numSides + " sides : " + pulsesRemaining);
 
@@ -167,4 +170,9 @@ public class ResonatorScript : MonoBehaviour {
 		}
 	}
 
+	//	sends its identity to the music program
+	//	each resonator makes a different sound when it pulses depending on its shape
+	void SendNumSides(int x) {
+		//OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", x);
+	}
 }

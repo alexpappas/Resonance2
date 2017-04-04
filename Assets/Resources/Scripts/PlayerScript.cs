@@ -24,7 +24,7 @@ public class PlayerScript : MonoBehaviour {
 
 	//	we can play with these 3 until we are happy!!!
 	//	rotation speed
-	float speed = 100;
+	float speed = 250;
 	//	number of sides
 	private int numSides = 5;
 	//	force for pulses
@@ -101,67 +101,51 @@ public class PlayerScript : MonoBehaviour {
 		else //	you are still resonanting and can still pulse
 			GetComponent<Renderer>().material.color = Color.white;
 
-
-
-		//remove all lines
-
-
-		//Create the aiming lines
-		for (int i = 0; i < numSides; i++)
-		{
-			
-			//<LineRenderer> curLineRenderer = gameObject.AddComponent<LineRenderer>();
-		}
-
 	}
 
 	//	this is called when the player presses the spacebar
-	//	it instantiates one of the pulse prefabs based on the number of sides of the object
+	//	it instantiates a one of the pulse prefabs based on the number of sides of the object
 	//	(if numSides is 5 it will instantiate the pentPulse prefab)
 	//	(if numSides is 4 it will instantiate the sqrPulse prefab)
 	//	(if it has fewer than 3 sides it will not pulse
 	void ExecutePulse() {
-		
+
 		//print ("Pulse strength = " + (pulseForce/numSides));
 		if (numSides >= 6) {
+			GoalReached.number_of_shots++;
 			GameObject s = Instantiate (hexPulse, transform.position, transform.rotation);
 			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
-				if (s.GetComponentsInChildren<Transform> () [i].CompareTag ("pulse")) {
-					s.GetComponentsInChildren<Transform> () [i].name = "Player's Pulse";
-				}
+				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
 			}
 			numSides = numSides - 1;
 			GameManager.instance.DecrementNumSides ();
 
 		}
 		else if (numSides == 5) {
+			GoalReached.number_of_shots++;
 			GameObject s = Instantiate (pentPulse, transform.position, transform.rotation);
 			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
-				if (s.GetComponentsInChildren<Transform> () [i].CompareTag ("pulse")) {
-					s.GetComponentsInChildren<Transform> () [i].name = "Player's Pulse";
-				}
+				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
 			}
 			numSides = numSides - 1;
 			GameManager.instance.DecrementNumSides ();
 
 		}
 		else if (numSides == 4) {
+			GoalReached.number_of_shots++;
 			GameObject s = Instantiate (sqrPulse, transform.position, transform.rotation);
 			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
-				if (s.GetComponentsInChildren<Transform> () [i].CompareTag ("pulse")) {
-					s.GetComponentsInChildren<Transform> () [i].name = "Player's Pulse";
-				}
+				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
 			}
 			numSides = numSides - 1;
 			GameManager.instance.DecrementNumSides ();
 
 		}
 		else if (numSides == 3) {
+			GoalReached.number_of_shots++;
 			GameObject s = Instantiate (triPulse, transform.position, transform.rotation);
 			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
-				if (s.GetComponentsInChildren<Transform> () [i].CompareTag ("pulse")) {
-					s.GetComponentsInChildren<Transform> () [i].name = "Player's Pulse";
-				}
+				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
 			}
 			numSides = numSides - 1;
 			GameManager.instance.DecrementNumSides ();
