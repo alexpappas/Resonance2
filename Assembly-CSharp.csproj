@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{667A8E4D-C8AA-5436-F64C-99E1A7F98835}</ProjectGuid>
+    <ProjectGuid>{1EC4266B-582F-3FF1-EF4C-D46CC3F07322}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,16 +53,17 @@
      <Compile Include="Assets\OSC\OSCServer.cs" />
      <Compile Include="Assets\OSCHandler.cs" />
      <Compile Include="Assets\Resources\Scripts\AudioManager.cs" />
+     <Compile Include="Assets\Resources\Scripts\BigRotation.cs" />
      <Compile Include="Assets\Resources\Scripts\FoodScript.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIHandler.cs" />
      <Compile Include="Assets\Resources\Scripts\GameManager.cs" />
      <Compile Include="Assets\Resources\Scripts\GoalReached.cs" />
      <Compile Include="Assets\Resources\Scripts\PappasBigRotate.cs" />
      <Compile Include="Assets\Resources\Scripts\PlayerScript.cs" />
+     <Compile Include="Assets\Resources\Scripts\PulseDrag.cs" />
      <Compile Include="Assets\Resources\Scripts\PulseGroupScript.cs" />
      <Compile Include="Assets\Resources\Scripts\PulseScript.cs" />
      <Compile Include="Assets\Resources\Scripts\ResonatorScript.cs" />
-     <Compile Include="Assets\Resources\Scripts\SquareRotation.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

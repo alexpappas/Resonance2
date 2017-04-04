@@ -80,10 +80,11 @@ public class ResonatorScript : MonoBehaviour {
 		//	and if that pentagon is rotating it turns off
 		//	if people like it this week this is our next big project
 		//	that i'm really gonna need you're help with!
-		if (this.GetComponentInParent<PappasBigRotate> () == null) {
+		if (this.GetComponentInParent<BigRotation> () == null) {
 			//print ("AH");
-		} else if (this.GetComponentInParent<PappasBigRotate> ().isRotating) {
+		} else if (this.GetComponentInParent<BigRotation> ().isRotating) {
 			isResonating = false;
+			hasBeenActivated = false;
 			SetMyColor ();
 			CancelInvoke ("ExecutePulse");
 		}
