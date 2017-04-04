@@ -320,6 +320,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fedab8a49374343b7b5def51ddd51022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goal1: {fileID: 1617027552}
+  goal2: {fileID: 1057187684}
+  goal3: {fileID: 874187199}
+  image1: {fileID: 1893041785}
+  image2: {fileID: 207312651}
+  image3: {fileID: 1818206060}
+  star1: {fileID: 467293042}
+  star2: {fileID: 395612641}
+  star3: {fileID: 1051610359}
+  check1: {fileID: 597967580}
+  check2: {fileID: 2128948051}
+  check3: {fileID: 1558470447}
+  next_button: {fileID: 484288822}
 --- !u!4 &318081684
 Transform:
   m_ObjectHideFlags: 0
@@ -734,9 +747,25 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114517619113319736, guid: 9e388d7d202db40088561254c3c10fc3,
+        type: 2}
+      propertyPath: nButton
+      value: 
+      objectReference: {fileID: 484288821}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e388d7d202db40088561254c3c10fc3, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &484288821 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1083980574933488, guid: 9e388d7d202db40088561254c3c10fc3,
+    type: 2}
+  m_PrefabInternal: {fileID: 484288820}
+--- !u!114 &484288822 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114702976733636568, guid: 9e388d7d202db40088561254c3c10fc3,
+    type: 2}
+  m_PrefabInternal: {fileID: 484288820}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &494137357
 GameObject:
   m_ObjectHideFlags: 0

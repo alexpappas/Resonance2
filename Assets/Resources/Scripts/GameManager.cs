@@ -144,6 +144,7 @@ public class GameManager : MonoBehaviour {
 
 	public void restart_button_click(){
 		Application.LoadLevel(Application.loadedLevel);
+		GameManager.number_of_shots = 0;
 	}
 
 	public void pause_button_click(){
