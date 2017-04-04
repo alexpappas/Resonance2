@@ -26,4 +26,6 @@ public class GUIHandler : MonoBehaviour {
 		nButton.GetComponent<Button>().onClick.AddListener (GameManager.instance.next_stage_button_click);
 	}
 
+
+
 }

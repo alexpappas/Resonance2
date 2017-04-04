@@ -1,0 +1,27 @@
+1.
+Triangle        Square      Goal
+
+
+Player          Triangle
+
+-- Someone complained about this tutorial. It did not make sense.
+-- Fernando said he understands this stage, no problem.
+
+2. What is Green/Gray Shade??
+-- We are still debating on it.
+
+3. An idea to move player:
+-- Pulses allows you to swap body with other resonators.
+
+4. Hard to aim precisely with arrow key.
+
+5. People had no idea that resonators will rotate until he sees it.
+
+6. Make player pulse different color than other pulses.
+
+7. Add feature to change shape of other resonators.
+    (Maybe click the resonator to change it's shape)
+
+8. Use mouse, disable the cursor, to rotate the player.
+
+9. Andy: We should spend more time on coloring.

@@ -113,7 +113,7 @@ public class PlayerScript : MonoBehaviour {
 
 		//print ("Pulse strength = " + (pulseForce/numSides));
 		if (numSides >= 6) {
-			GoalReached.number_of_shots++;
+			GameManager.number_of_shots++;
 			GameObject s = Instantiate (hexPulse, transform.position, transform.rotation);
 			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
 				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
@@ -123,7 +123,7 @@ public class PlayerScript : MonoBehaviour {
 
 		}
 		else if (numSides == 5) {
-			GoalReached.number_of_shots++;
+			GameManager.number_of_shots++;
 			GameObject s = Instantiate (pentPulse, transform.position, transform.rotation);
 			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
 				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
@@ -133,7 +133,7 @@ public class PlayerScript : MonoBehaviour {
 
 		}
 		else if (numSides == 4) {
-			GoalReached.number_of_shots++;
+			GameManager.number_of_shots++;
 			GameObject s = Instantiate (sqrPulse, transform.position, transform.rotation);
 			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
 				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
@@ -143,7 +143,7 @@ public class PlayerScript : MonoBehaviour {
 
 		}
 		else if (numSides == 3) {
-			GoalReached.number_of_shots++;
+			GameManager.number_of_shots++;
 			GameObject s = Instantiate (triPulse, transform.position, transform.rotation);
 			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
 				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
