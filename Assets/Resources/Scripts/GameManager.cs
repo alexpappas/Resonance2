@@ -74,19 +74,25 @@ public class GameManager : MonoBehaviour {
 
 	}
 
-	//	decreases the number of sides the player has by 1
+	//	decreases the number of sides the player has by 1 (but lets the player do it and then gets the value back)
 	public void DecrementNumSides() {
-		numSides--;
-		SendNumSides (numSides);
+		PlayerScript.instance.decrementNumSides();
+
+		numSides = PlayerScript.instance.getNumSides ();
+		AudioManager.instance.PlayerPulse (numSides);
+
 	}
 
-	//	increases the number of sides the player has by 1
+	//	increases the number of sides the player has by 1 (but lets the player do it and then gets the value back)
 	public void IncrementNumSides() {
-		numSides++;
-		SendNumSides (numSides);
+		
+		PlayerScript.instance.incrementNumSides();
+		numSides = PlayerScript.instance.getNumSides ();
+		AudioManager.instance.PlayerPulse (numSides);
+
 	}
 
-	//	returns the number of sides the player has
+	//	returns the number of sides the player has // shouldn't be necessary anymore but i'm still keeping it in just in case.
 	public int GetNumSides() {
 		return numSides;
 	}
@@ -95,6 +101,9 @@ public class GameManager : MonoBehaviour {
 	void SendNumSides(int x) {
 		AudioManager.instance.PlayerPulse (numSides);
 		PlayerScript.instance.setNumSides(x);
+
+		numSides = PlayerScript.instance.getNumSides ();
+
 
 	}
 

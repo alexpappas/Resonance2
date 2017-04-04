@@ -24,7 +24,7 @@ public class PlayerScript : MonoBehaviour {
 
 	//	we can play with these 3 until we are happy!!!
 	//	rotation speed
-	float speed = 250;
+	float speed = 100; //changed the player speed to 100 to slow down rotations.
 	//	number of sides
 	private int numSides = 5;
 	//	force for pulses
@@ -117,7 +117,7 @@ public class PlayerScript : MonoBehaviour {
 			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
 				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
 			}
-			numSides = numSides - 1;
+			//numSides = numSides - 1;
 			GameManager.instance.DecrementNumSides ();
 
 		}
@@ -127,7 +127,7 @@ public class PlayerScript : MonoBehaviour {
 			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
 				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
 			}
-			numSides = numSides - 1;
+			//numSides = numSides - 1;
 			GameManager.instance.DecrementNumSides ();
 
 		}
@@ -137,7 +137,7 @@ public class PlayerScript : MonoBehaviour {
 			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
 				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
 			}
-			numSides = numSides - 1;
+			//numSides = numSides - 1;
 			GameManager.instance.DecrementNumSides ();
 
 		}
@@ -147,7 +147,7 @@ public class PlayerScript : MonoBehaviour {
 			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
 				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
 			}
-			numSides = numSides - 1;
+			//numSides = numSides - 1;
 			GameManager.instance.DecrementNumSides ();
 
 		}
@@ -158,6 +158,22 @@ public class PlayerScript : MonoBehaviour {
 		//	after pulse resets appearance
 		SetSprite ();
 
+	}
+	// these next three function are for the GM to be able to coordinate with the player for number of sides but the GM is not in charge of anything for numsides and will
+	//always go to whatever the number of sides the player says it has.
+	public void incrementNumSides()
+	{
+		numSides = numSides + 1;
+		SetSprite ();
+	}
+	public void decrementNumSides()
+	{
+		numSides = numSides - 1;
+	}
+
+	public int getNumSides()
+	{
+		return numSides;
 	}
 
 	public void setNumSides(int newNumSides)
