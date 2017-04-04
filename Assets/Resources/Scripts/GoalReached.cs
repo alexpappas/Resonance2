@@ -74,29 +74,30 @@ public class GoalReached : MonoBehaviour {
 
 			//	notifies AM
 			AudioManager.instance.GoalBubble ();
-		}
+			}
 
-
-		// Game Scoring Stuff
-		Vector3 results = determine_results();
-		print (results);
-		if (results [0] == 1.0f) {
-			Sprite new_sprite = Resources.Load<Sprite> ("Sprites/gold_star.png");
-			star1.sprite = new_sprite;
-		}
-		goal1.text = "Reach the food";
-		goal1.color = Color.black;
-		goal2.text = "Activate all resonators";
-		goal3.text = "3 shots or less";
-		image1.enabled = true;
-		image2.enabled = true;
-		image3.enabled = true;
-		goal1.enabled = true;
-		goal2.enabled = true;
-		goal3.enabled = true;
-		star1.enabled = true;
-		star2.enabled = true;
-		star3.enabled = true;
+	
+			// Game Scoring Stuff
+			Vector3 results = determine_results ();
+			print (results);
+			if (results [0] == 1.0f) {
+				Sprite new_sprite = Resources.Load<Sprite> ("Sprites/gold_star.png");
+				star1.sprite = new_sprite;
+			}
+			goal1.text = "Reach the food";
+			goal1.color = Color.black;
+			goal2.text = "Activate all resonators";
+			goal3.text = "3 shots or less";
+			image1.enabled = true;
+			image2.enabled = true;
+			image3.enabled = true;
+			goal1.enabled = true;
+			goal2.enabled = true;
+			goal3.enabled = true;
+			star1.enabled = true;
+			star2.enabled = true;
+			star3.enabled = true;
+	
 	}
 
 	private Vector3 determine_results() {

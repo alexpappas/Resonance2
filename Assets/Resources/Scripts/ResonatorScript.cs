@@ -85,6 +85,7 @@ public class ResonatorScript : MonoBehaviour {
 			//print ("AH");
 		} else if (this.GetComponentInParent<BigRotation> ().isRotating) {
 			isResonating = false;
+			hasBeenActivated = false;
 			SetMyColor ();
 			CancelInvoke ("ExecutePulse");
 		}
@@ -145,7 +146,7 @@ public class ResonatorScript : MonoBehaviour {
 		//	the area of the sprite behind it increases
 		//	these are the growing colored areas that radiate out from the resonators
 		//	this is the thing that i may not include in the future
-		resonArea.transform.localScale *= 2;
+		//resonArea.transform.localScale *= 2;
 
 		//print ("I have " + numSides + " sides : " + pulsesRemaining);
 
