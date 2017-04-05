@@ -57,7 +57,8 @@ public class PlayerScript : MonoBehaviour {
 	Color noRes = new Vector4(0.133f, 0.2f, 0.7f, 1.0f);
 
 
-	//this is for the aiming line rendering
+	//this is for the aiming line rendering, prefab objects
+	//public GameObject triLines;
 
 	void Awake()
 	{
@@ -67,6 +68,9 @@ public class PlayerScript : MonoBehaviour {
 		} else if (instance != this) {
 			Destroy (gameObject);
 		}
+
+		//instantiate the prefabs
+		//triLines.transform.SetParent();
 
 	}
 
@@ -105,6 +109,9 @@ public class PlayerScript : MonoBehaviour {
 			GetComponent<Renderer>().material.color = noRes;
 		else //	you are still resonanting and can still pulse
 			GetComponent<Renderer>().material.color = Color.white;
+
+
+		//only display one of the prefabs
 
 
 
