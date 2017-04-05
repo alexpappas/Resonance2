@@ -263,6 +263,7 @@ MonoBehaviour:
   sprite4: {fileID: 21300000, guid: c184303e8a1434b4781f4fe2cf91d31d, type: 3}
   sprite5: {fileID: 21300000, guid: 7581800ea49304435b379b0577696d2d, type: 3}
   sprite6: {fileID: 21300000, guid: 96ba80c5b71a04932bedcd05e9fcfaba, type: 3}
+  triLines: {fileID: 1183873429891460, guid: 4795b4ecd69054834a24ec305cd99775, type: 2}
 --- !u!212 &438722651
 SpriteRenderer:
   m_ObjectHideFlags: 0

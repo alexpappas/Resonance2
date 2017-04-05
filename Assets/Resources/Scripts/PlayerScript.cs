@@ -50,6 +50,7 @@ public class PlayerScript : MonoBehaviour {
 	public Sprite sprite5;
 	public Sprite sprite6;
 
+
 	Vector3 rotationEuler;
 
 	//	color when player is deactivated (when numSides < 3)
@@ -58,7 +59,7 @@ public class PlayerScript : MonoBehaviour {
 
 
 	//this is for the aiming line rendering, prefab objects
-	//public GameObject triLines;
+	public GameObject triLines;
 
 	void Awake()
 	{
@@ -203,8 +204,12 @@ public class PlayerScript : MonoBehaviour {
 	void SetSprite() {
 		if (numSides == 2)	//	you have less than 3 sides, but we don't wanna make you a line... so you're still a triangle
 			this.GetComponent<SpriteRenderer> ().sprite = sprite3;
-		if (numSides == 3)	//	you have 3 sides, you are a triangle
+		if (numSides == 3) {	//	you have 3 sides, you are a triangle
 			this.GetComponent<SpriteRenderer> ().sprite = sprite3;
+			//	instantiate triLines
+			GameObject s = Instantiate (triLines, transform.position, transform.rotation);
+			s.transform.SetParent (this.transform);
+		}
 		if (numSides == 4)	//	you have 4 sides, you are a square
 			this.GetComponent<SpriteRenderer> ().sprite = sprite4;
 		if (numSides == 5)	//	pentagon
