@@ -109,9 +109,10 @@ public class GameManager : MonoBehaviour {
 	}
 
 	private void display_score() {
+
 		// Game Scoring Stuff
 		Vector3 results = determine_results();
-		print (results);
+		//print (results);
 		if (results [0] == 1.0f) {
 			Sprite new_sprite = Resources.Load<Sprite> ("Sprites/gold_star");
 			star1.sprite = new_sprite;

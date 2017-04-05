@@ -81,10 +81,11 @@ public class ResonatorScript : MonoBehaviour {
 		//	and if that pentagon is rotating it turns off
 		//	if people like it this week this is our next big project
 		//	that i'm really gonna need you're help with!
-		if (this.GetComponentInParent<PappasBigRotate> () == null) {
+		if (this.GetComponentInParent<BigRotation> () == null) {
 			//print ("AH");
-		} else if (this.GetComponentInParent<PappasBigRotate> ().isRotating) {
+		} else if (this.GetComponentInParent<BigRotation> ().isRotating) {
 			isResonating = false;
+			hasBeenActivated = false;
 			SetMyColor ();
 			CancelInvoke ("ExecutePulse");
 		}
@@ -145,7 +146,7 @@ public class ResonatorScript : MonoBehaviour {
 		//	the area of the sprite behind it increases
 		//	these are the growing colored areas that radiate out from the resonators
 		//	this is the thing that i may not include in the future
-		resonArea.transform.localScale *= 2;
+		//resonArea.transform.localScale *= 2;
 
 		//print ("I have " + numSides + " sides : " + pulsesRemaining);
 

@@ -54,6 +54,12 @@ public class BigRotation : MonoBehaviour {
 
 		if (childrenActivated) {
 			shouldRotate = true;
+
+			foreach (Transform child in this.transform) {
+				if (child.CompareTag ("resonator")) {
+					child.GetComponent<ResonatorScript> ().hasBeenActivated = false;
+				}
+			}
 		}
 
 	}
