@@ -21,12 +21,12 @@ public class BigRotation : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		if (rotateShape == 5) {
-			angleDelta = 72;
+			angleDelta = 36;
 		} else if (rotateShape == 4) {
-			angleDelta = 90;
+			angleDelta = 45;
 			//CreateChildrenSqr ();
 		} else if (rotateShape == 3) {
-			angleDelta = 60;
+			angleDelta = 30;
 		}
 	}
 	
