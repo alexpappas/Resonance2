@@ -56,6 +56,9 @@ public class PlayerScript : MonoBehaviour {
 	//	still LOOKS like a triangle but it's out of pulses and inert
 	Color noRes = new Vector4(0.133f, 0.2f, 0.7f, 1.0f);
 
+
+	//this is for the aiming line rendering
+
 	void Awake()
 	{
 		//	set the instance value to self.
@@ -64,6 +67,7 @@ public class PlayerScript : MonoBehaviour {
 		} else if (instance != this) {
 			Destroy (gameObject);
 		}
+
 	}
 
 
@@ -101,6 +105,8 @@ public class PlayerScript : MonoBehaviour {
 			GetComponent<Renderer>().material.color = noRes;
 		else //	you are still resonanting and can still pulse
 			GetComponent<Renderer>().material.color = Color.white;
+
+
 
 	}
 
