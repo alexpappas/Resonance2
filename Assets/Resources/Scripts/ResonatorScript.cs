@@ -175,5 +175,6 @@ public class ResonatorScript : MonoBehaviour {
 	//	each resonator makes a different sound when it pulses depending on its shape
 	void SendNumSides(int x) {
 		//OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", x);
+		AudioManager.instance.ResonatorPulse(x);
 	}
 }

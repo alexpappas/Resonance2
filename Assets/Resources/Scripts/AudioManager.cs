@@ -42,7 +42,7 @@ public class AudioManager : MonoBehaviour {
 	//	if goal has been achieved sends value of 8
 	public void GoalBubble() {
 		if (audioON) {
-			OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", 8);
+		//	OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", "bubble");
 		}
 	}
 

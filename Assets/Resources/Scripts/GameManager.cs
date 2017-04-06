@@ -64,7 +64,9 @@ public class GameManager : MonoBehaviour {
 			"Tutorial04",
 			"Tutorial05",
 			"Level01",
-			"Level02"
+			"Level02",
+			"Level03",
+			"Level24"
 		};
 
 		if (SceneManager.GetActiveScene ().name == "TitleScreen") {
