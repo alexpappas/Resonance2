@@ -26,7 +26,7 @@ public class BigRotation : MonoBehaviour {
 			angleDelta = 45;
 			//CreateChildrenSqr ();
 		} else if (rotateShape == 3) {
-			angleDelta = 30;
+			angleDelta = 60;
 		}
 	}
 	

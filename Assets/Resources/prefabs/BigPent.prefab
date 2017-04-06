@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 61786907574335508}
   - component: {fileID: 50127597349760890}
   - component: {fileID: 114630122363844894}
+  - component: {fileID: 68500356449919430}
   m_Layer: 0
   m_Name: resonatorPent (7)
   m_TagString: resonator
@@ -141,6 +142,7 @@ GameObject:
   - component: {fileID: 61150451118791370}
   - component: {fileID: 50387823406058036}
   - component: {fileID: 114639095082742460}
+  - component: {fileID: 68359617260369624}
   m_Layer: 0
   m_Name: resonatorPent (6)
   m_TagString: resonator
@@ -160,6 +162,7 @@ GameObject:
   - component: {fileID: 61584100641157346}
   - component: {fileID: 50438669894110554}
   - component: {fileID: 114751375022295648}
+  - component: {fileID: 68050025647829220}
   m_Layer: 0
   m_Name: resonatorPent (9)
   m_TagString: resonator
@@ -211,6 +214,7 @@ GameObject:
   - component: {fileID: 61178528884780870}
   - component: {fileID: 50774301162013316}
   - component: {fileID: 114663424964315110}
+  - component: {fileID: 68584536017866332}
   m_Layer: 0
   m_Name: resonatorPent (8)
   m_TagString: resonator
@@ -628,7 +632,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 3}
+  m_Size: {x: 2.5, y: 2.5}
   m_EdgeRadius: 0
 --- !u!61 &61150451118791370
 BoxCollider2D:
@@ -730,6 +734,90 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
+--- !u!68 &68050025647829220
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1733951575669706}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0, y: 1.4}
+  - {x: 1.44, y: 0.4}
+  - {x: 0.9, y: -1.4}
+  - {x: -0.9, y: -1.4}
+  - {x: -1.44, y: 0.4}
+  - {x: 0, y: 1.4}
+--- !u!68 &68359617260369624
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1706929831833486}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0, y: 1.4}
+  - {x: 1.44, y: 0.4}
+  - {x: 0.9, y: -1.4}
+  - {x: -0.9, y: -1.4}
+  - {x: -1.44, y: 0.4}
+  - {x: 0, y: 1.4}
+--- !u!68 &68500356449919430
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1502086482114560}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0, y: 1.4}
+  - {x: 1.44, y: 0.4}
+  - {x: 0.9, y: -1.4}
+  - {x: -0.9, y: -1.4}
+  - {x: -1.44, y: 0.4}
+  - {x: 0, y: 1.4}
+--- !u!68 &68584536017866332
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1840468410085258}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0, y: 1.4}
+  - {x: 1.44, y: 0.4}
+  - {x: 0.9, y: -1.4}
+  - {x: -0.9, y: -1.4}
+  - {x: -1.44, y: 0.4}
+  - {x: 0, y: 1.4}
 --- !u!114 &114584783653890234
 MonoBehaviour:
   m_ObjectHideFlags: 1
