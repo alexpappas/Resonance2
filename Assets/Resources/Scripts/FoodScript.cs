@@ -18,7 +18,7 @@ public class FoodScript : MonoBehaviour {
 
 
 	void OnTriggerEnter2D(Collider2D coll) {		
-		GameManager.instance.IncrementNumSides ();
+		PlayerScript.instance.incrementNumSides ();
 		Destroy (this.gameObject);
 	}
 }
