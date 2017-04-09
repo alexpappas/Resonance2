@@ -14,7 +14,14 @@ public class BigRotation : MonoBehaviour {
 	bool shouldRotate = false;
 	public bool isRotating = false;
 
+	//rotating half or full angles
+	public bool shouldRotateHalf = false; // shouldRotateHalf = true only rotates half, else rotates full
+
 	//	public GameObject sqrRes;	//	for variable radius and instantiation of resonators
+
+
+
+
 
 	GameObject[] members;
 
@@ -28,6 +35,12 @@ public class BigRotation : MonoBehaviour {
 		} else if (rotateShape == 3) {
 			angleDelta = 60;
 		}
+
+		//angle has been determined and we check if it needs to be cut in half
+		if (shouldRotateHalf == true) {
+			angleDelta = angleDelta / 2;
+		}
+
 	}
 	
 	// Update is called once per frame
