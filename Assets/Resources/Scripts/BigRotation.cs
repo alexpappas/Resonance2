@@ -17,6 +17,8 @@ public class BigRotation : MonoBehaviour {
 	//rotating half or full angles
 	public bool shouldRotateHalf = false; // shouldRotateHalf = true only rotates half, else rotates full
 
+    public bool clockwise = false; //default is counter-clockwise operation. set this to true if want clockwise
+
 	//	public GameObject sqrRes;	//	for variable radius and instantiation of resonators
 
 
@@ -41,6 +43,10 @@ public class BigRotation : MonoBehaviour {
 			angleDelta = angleDelta / 2;
 		}
 
+        if (clockwise == true)
+        {
+            angleDelta = -angleDelta;
+        }
 	}
 	
 	// Update is called once per frame
@@ -51,8 +57,8 @@ public class BigRotation : MonoBehaviour {
 		if (shouldRotate) {
 			shouldRotate = false;
 			currentAngle = transform.eulerAngles;
-			targetAngle = new Vector3 (0, 0, currentAngle.z + angleDelta);
-			StartCoroutine ("Rotate");
+            targetAngle = new Vector3(0, 0, currentAngle.z + angleDelta);
+            StartCoroutine ("Rotate");
 		}
 
 	}
@@ -82,13 +88,32 @@ public class BigRotation : MonoBehaviour {
 		
 		if (!isRotating) {
 			isRotating = true;
-			while (currentAngle.z < targetAngle.z) {
-				currentAngle = new Vector3 (0, 0, Mathf.MoveTowardsAngle (currentAngle.z, targetAngle.z, Time.deltaTime * 50));
-				transform.eulerAngles = currentAngle;
-				yield return null;
-			}
 
-			isRotating = false;
+            print(clockwise);
+            print(currentAngle);
+            print(targetAngle);
+
+            if (clockwise == true)
+            {
+
+                while (targetAngle.z < currentAngle.z)
+                {
+                    currentAngle = new Vector3(0, 0, Mathf.MoveTowardsAngle(currentAngle.z, targetAngle.z, Time.deltaTime * 50));
+                    transform.eulerAngles = currentAngle;
+                    yield return null;
+                }
+            }
+            else
+            {
+                while (currentAngle.z < targetAngle.z)
+                {
+                    currentAngle = new Vector3(0, 0, Mathf.MoveTowardsAngle(currentAngle.z, targetAngle.z, Time.deltaTime * 50));
+                    transform.eulerAngles = currentAngle;
+                    yield return null;
+                }
+            }
+
+            isRotating = false;
 		}
 	}
 
