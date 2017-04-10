@@ -45,10 +45,12 @@ public class PulseScript : MonoBehaviour {
 
 
 		//	Instantiate Color Trail
-		myDrag = (GameObject)Instantiate (Resources.Load ("prefabs/pulseDrag"), transform.position, transform.rotation);
+/*		myDrag = (GameObject)Instantiate (Resources.Load ("prefabs/pulseDrag"), transform.position, transform.rotation);
 		myDrag.transform.SetParent (this.transform);
 		myDrag.transform.localPosition = new Vector3 (-4, 0, 0);
 		myDrag.transform.localScale = new Vector3 (4, 1, 1);
+*/
+
 
 		//	Instantiate Particle Trail
 //		GameObject myParticles = (GameObject)Instantiate (Resources.Load ("prefabs/pulseTrail"), transform.position, transform.rotation);
@@ -67,11 +69,15 @@ public class PulseScript : MonoBehaviour {
 		colorStart.a = Mathf.Abs (rb.velocity.magnitude);
 		GetComponent<Renderer>().material.color = colorStart;
 
+
+		/*
 		float trailLength = myDrag.transform.localScale.x;
 		myDrag.transform.localScale = new Vector3(2 * Mathf.Abs(rb.velocity.magnitude), 1, 1);
 		trailLength += myDrag.transform.localScale.x;
 		trailLength *= -0.5f;
 		myDrag.transform.localPosition = new Vector3 (trailLength, 0, 0);
+*/
+
 
 		//	this is buggy... give it enough time to stabilize before it destroys itself
 		//	it was trying to destroy itself like RIGHT when it was created

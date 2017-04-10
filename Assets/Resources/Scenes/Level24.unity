@@ -636,6 +636,21 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114968666889512520, guid: aaff488a11b504b049904415cebc6d3c,
+        type: 2}
+      propertyPath: clockwise
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114968666889512520, guid: aaff488a11b504b049904415cebc6d3c,
+        type: 2}
+      propertyPath: shouldRotateHalf
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114968666889512520, guid: aaff488a11b504b049904415cebc6d3c,
+        type: 2}
+      propertyPath: rotateSpeed
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaff488a11b504b049904415cebc6d3c, type: 2}
   m_IsPrefabParent: 0
@@ -668,7 +683,7 @@ Transform:
   m_GameObject: {fileID: 841147035}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1, y: -1, z: 0}
-  m_LocalScale: {x: 0.08, y: 0.08, z: 0.19999999}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 0.19999999}
   m_Children:
   - {fileID: 592221610}
   m_Father: {fileID: 1482241241}
@@ -971,7 +986,7 @@ Transform:
   m_GameObject: {fileID: 1171258520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1, y: 1, z: 0}
-  m_LocalScale: {x: 0.08, y: 0.08, z: 0.2}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 0.2}
   m_Children:
   - {fileID: 1616702515}
   m_Father: {fileID: 1482241241}
@@ -1114,7 +1129,7 @@ Transform:
   m_GameObject: {fileID: 1254897660}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1, y: 1, z: 0}
-  m_LocalScale: {x: 0.08, y: 0.08, z: 0.19999999}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 0.19999999}
   m_Children:
   - {fileID: 937503715}
   m_Father: {fileID: 1482241241}
@@ -1348,6 +1363,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateShape: 4
   isRotating: 0
+  shouldRotateHalf: 1
+  clockwise: 0
+  rotateSpeed: 20
 --- !u!4 &1482241241
 Transform:
   m_ObjectHideFlags: 0
@@ -1357,7 +1375,7 @@ Transform:
   m_GameObject: {fileID: 1482241239}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 385810834}
   - {fileID: 753796009}
@@ -1513,3 +1531,45 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+--- !u!1001 &1874440309
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 442252, guid: f4e71ca38a69d45538b9b59d7466121a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 442252, guid: f4e71ca38a69d45538b9b59d7466121a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 442252, guid: f4e71ca38a69d45538b9b59d7466121a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 442252, guid: f4e71ca38a69d45538b9b59d7466121a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 442252, guid: f4e71ca38a69d45538b9b59d7466121a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 442252, guid: f4e71ca38a69d45538b9b59d7466121a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 442252, guid: f4e71ca38a69d45538b9b59d7466121a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 442252, guid: f4e71ca38a69d45538b9b59d7466121a, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f4e71ca38a69d45538b9b59d7466121a, type: 2}
+  m_IsPrefabParent: 0

@@ -132,6 +132,7 @@ public class PlayerScript : MonoBehaviour {
 			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
 				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
 			}
+			AudioManager.instance.PlayerPulse (numSides);
 			numSides = numSides - 1;
 			//GameManager.instance.DecrementNumSides ();
 
@@ -142,6 +143,7 @@ public class PlayerScript : MonoBehaviour {
 			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
 				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
 			}
+			AudioManager.instance.PlayerPulse (numSides);
 			numSides = numSides - 1;
 			//GameManager.instance.DecrementNumSides ();
 
@@ -152,6 +154,7 @@ public class PlayerScript : MonoBehaviour {
 			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
 				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
 			}
+			AudioManager.instance.PlayerPulse (numSides);
 			numSides = numSides - 1;
 			//GameManager.instance.DecrementNumSides ();
 
@@ -162,6 +165,7 @@ public class PlayerScript : MonoBehaviour {
 			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
 				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
 			}
+			AudioManager.instance.PlayerPulse (numSides);
 			numSides = numSides - 1;
 			//GameManager.instance.DecrementNumSides ();
 
@@ -170,10 +174,6 @@ public class PlayerScript : MonoBehaviour {
 			//print ("no pulse");
 		}
 
-		if (numSides > 2) {
-			AudioManager.instance.PlayerPulse (numSides);
-
-		}
 		//	after pulse resets appearance
 		SetSprite ();
 

@@ -21,18 +21,16 @@ public class BigRotation : MonoBehaviour {
 
 	//	public GameObject sqrRes;	//	for variable radius and instantiation of resonators
 
-
-
-
+	public int rotateSpeed;
 
 	GameObject[] members;
 
 	// Use this for initialization
 	void Start () {
 		if (rotateShape == 5) {
-			angleDelta = 36;
+			angleDelta = 72;
 		} else if (rotateShape == 4) {
-			angleDelta = 45;
+			angleDelta = 90;
 			//CreateChildrenSqr ();
 		} else if (rotateShape == 3) {
 			angleDelta = 60;
@@ -59,6 +57,7 @@ public class BigRotation : MonoBehaviour {
 			currentAngle = transform.eulerAngles;
             targetAngle = new Vector3(0, 0, currentAngle.z + angleDelta);
             StartCoroutine ("Rotate");
+			AudioManager.instance.RotateSound (rotateShape);
 		}
 
 	}
@@ -98,7 +97,7 @@ public class BigRotation : MonoBehaviour {
 
                 while (targetAngle.z < currentAngle.z)
                 {
-                    currentAngle = new Vector3(0, 0, Mathf.MoveTowardsAngle(currentAngle.z, targetAngle.z, Time.deltaTime * 50));
+                    currentAngle = new Vector3(0, 0, Mathf.MoveTowardsAngle(currentAngle.z, targetAngle.z, Time.deltaTime * rotateSpeed));
                     transform.eulerAngles = currentAngle;
                     yield return null;
                 }
@@ -107,7 +106,7 @@ public class BigRotation : MonoBehaviour {
             {
                 while (currentAngle.z < targetAngle.z)
                 {
-                    currentAngle = new Vector3(0, 0, Mathf.MoveTowardsAngle(currentAngle.z, targetAngle.z, Time.deltaTime * 50));
+                    currentAngle = new Vector3(0, 0, Mathf.MoveTowardsAngle(currentAngle.z, targetAngle.z, Time.deltaTime * rotateSpeed));
                     transform.eulerAngles = currentAngle;
                     yield return null;
                 }

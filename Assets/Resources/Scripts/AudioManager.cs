@@ -20,22 +20,27 @@ public class AudioManager : MonoBehaviour {
 			//	for communication with MaxMSP
 			OSCHandler.Instance.Init ();
 
-			//	a message of 0 turns the signal processing on
-			OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", 0);
+			OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", "onoff 1");
 		}
 	}
 
 	//	sends player pulse information to Max
 	public void PlayerPulse(int x) {
 		if (audioON) {
-			OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", x);
+			OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", "pulse " + x);
 		}
 	} 
 
 	//	sends resonator pulse information to Max
 	public void ResonatorPulse(int x) {
 		if (audioON) {
-			OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", x);
+			OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", "pulse " + x);
+		}
+	}
+
+	public void RotateSound(int x) {
+		if (audioON) {
+			OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", "rotate " + x);
 		}
 	}
 
@@ -50,7 +55,7 @@ public class AudioManager : MonoBehaviour {
 	void OnApplicationQuit() {
 		//	message of -1 turns audio off
 		if (audioON) {
-			OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", -1);
+			OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", "onoff 0");
 		}
 	}
 }
