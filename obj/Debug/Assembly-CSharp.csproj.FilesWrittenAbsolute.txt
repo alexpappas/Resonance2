@@ -106,3 +106,4 @@
 /Users/hallowmarshmallow/Documents/Unity/Resonance/Temp/bin/Debug/UnityEngine.TestRunner.dll
 /Users/hallowmarshmallow/Documents/Unity/Resonance/Temp/bin/Debug/nunit.framework.dll
 >>>>>>> Stashed changes
+/Users/hallowmarshmallow/Documents/Unity/Resonance/Temp/bin/Debug/nunit.framework.xml

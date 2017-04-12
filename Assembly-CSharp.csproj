@@ -61,10 +61,12 @@
      <Compile Include="Assets\Resources\Scripts\GoalReached.cs" />
      <Compile Include="Assets\Resources\Scripts\PappasBigRotate.cs" />
      <Compile Include="Assets\Resources\Scripts\PlayerScript.cs" />
+     <Compile Include="Assets\Resources\Scripts\PulseColor.cs" />
      <Compile Include="Assets\Resources\Scripts\PulseDrag.cs" />
      <Compile Include="Assets\Resources\Scripts\PulseGroupScript.cs" />
      <Compile Include="Assets\Resources\Scripts\PulseScript.cs" />
      <Compile Include="Assets\Resources\Scripts\ResonatorScript.cs" />
+     <Compile Include="Assets\WallScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

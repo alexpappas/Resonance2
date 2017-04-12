@@ -585,6 +585,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4802091105610288}
   - component: {fileID: 96405921913647586}
+  - component: {fileID: 114566461901456070}
   m_Layer: 0
   m_Name: Trail
   m_TagString: Untagged
@@ -601,6 +602,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4216276405435520}
   - component: {fileID: 96171772376105302}
+  - component: {fileID: 114531375127019138}
   m_Layer: 0
   m_Name: Trail
   m_TagString: Untagged
@@ -617,6 +619,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4281698770033892}
   - component: {fileID: 96546112684258516}
+  - component: {fileID: 114418069469370432}
   m_Layer: 0
   m_Name: Trail
   m_TagString: Untagged
@@ -633,6 +636,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4897659752796550}
   - component: {fileID: 96999800186074118}
+  - component: {fileID: 114484847893284832}
   m_Layer: 0
   m_Name: Trail
   m_TagString: Untagged
@@ -765,7 +769,7 @@ TrailRenderer:
       ctime5: 0
       ctime6: 0
       ctime7: 0
-      atime0: 10794
+      atime0: 5590
       atime1: 65535
       atime2: 0
       atime3: 0
@@ -855,7 +859,7 @@ TrailRenderer:
       ctime5: 0
       ctime6: 0
       ctime7: 0
-      atime0: 10794
+      atime0: 5590
       atime1: 65535
       atime2: 0
       atime3: 0
@@ -945,7 +949,7 @@ TrailRenderer:
       ctime5: 0
       ctime6: 0
       ctime7: 0
-      atime0: 10794
+      atime0: 5590
       atime1: 65535
       atime2: 0
       atime3: 0
@@ -1035,7 +1039,7 @@ TrailRenderer:
       ctime5: 0
       ctime6: 0
       ctime7: 0
-      atime0: 10794
+      atime0: 5590
       atime1: 65535
       atime2: 0
       atime3: 0
@@ -1052,3 +1056,47 @@ TrailRenderer:
     textureMode: 0
   m_MinVertexDistance: 0.005
   m_Autodestruct: 1
+--- !u!114 &114418069469370432
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1700889893924590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9a697bb53ac44349f94e5444bf6e00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114484847893284832
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1824051805807316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9a697bb53ac44349f94e5444bf6e00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114531375127019138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1223874543502448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9a697bb53ac44349f94e5444bf6e00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114566461901456070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1058267792193826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9a697bb53ac44349f94e5444bf6e00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
