@@ -84,7 +84,8 @@ public class GameManager : MonoBehaviour {
 			// Count how many resonators for game goal
 		} else {
 
-
+			count_of_resonators = 0;
+			count_of_activated_resonators = 0;
 			foreach (GameObject gameObj in GameObject.FindObjectsOfType<GameObject>()) {
 				if (gameObj.name.Contains ("resonator")) {
 					count_of_resonators++;
@@ -113,6 +114,7 @@ public class GameManager : MonoBehaviour {
 		if (number_of_shots <= 3) {
 			result [2] = 1;
 		}
+
 		if (count_of_activated_resonators == count_of_resonators) {
 			result [1] = 1;
 		}
@@ -185,6 +187,7 @@ public class GameManager : MonoBehaviour {
 				}
 			}
 			SceneManager.LoadScene(stages[next], LoadSceneMode.Single);
+
 			levelComplete = false;
 			score_or_go_next = 0;
 			GameManager.number_of_shots = 0;
