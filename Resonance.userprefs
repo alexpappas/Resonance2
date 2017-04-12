@@ -1,18 +1,18 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/OSCHandler.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Scripts/GameManager.cs">
     <Files>
+      <File FileName="Assets/Resources/Scripts/ResonatorScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Resources/Scripts/PulseColor.cs" Line="14" Column="1" />
       <File FileName="Assets/Resources/Scripts/PulseGroupScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Resources/Scripts/AudioManager.cs" Line="28" Column="25" />
-      <File FileName="Assets/Resources/Scripts/BigRotation.cs" Line="25" Column="27" />
-      <File FileName="Assets/Resources/Scripts/GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Resources/Scripts/PlayerScript.cs" Line="134" Column="5" />
-      <File FileName="Assets/Resources/Scripts/ResonatorScript.cs" Line="178" Column="1" />
+      <File FileName="Assets/Resources/Scripts/AudioManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Resources/Scripts/BigRotation.cs" Line="1" Column="1" />
+      <File FileName="Assets/Resources/Scripts/GameManager.cs" Line="70" Column="1" />
+      <File FileName="Assets/Resources/Scripts/PlayerScript.cs" Line="146" Column="1" />
       <File FileName="Assets/Resources/Scripts/GoalReached.cs" Line="1" Column="1" />
       <File FileName="Assets/Resources/Scripts/FoodScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Resources/Scripts/PulseScript.cs" Line="100" Column="19" />
+      <File FileName="Assets/Resources/Scripts/PulseScript.cs" Line="1" Column="1" />
       <File FileName="Assets/Resources/Scripts/DisappearingText.cs" Line="1" Column="1" />
-      <File FileName="Assets/OSCHandler.cs" Line="274" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
