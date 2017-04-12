@@ -476,7 +476,7 @@ MonoBehaviour:
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &1239238994 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114878829424544390, guid: 7daa9121a98e54e1daf7a4cfd4abe383,
+  m_PrefabParentObject: {fileID: 114736230025775584, guid: 7daa9121a98e54e1daf7a4cfd4abe383,
     type: 2}
   m_PrefabInternal: {fileID: 356153745}
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -720,6 +720,7 @@ MonoBehaviour:
   sprite4: {fileID: 21300000, guid: c184303e8a1434b4781f4fe2cf91d31d, type: 3}
   sprite5: {fileID: 21300000, guid: 7581800ea49304435b379b0577696d2d, type: 3}
   sprite6: {fileID: 21300000, guid: 96ba80c5b71a04932bedcd05e9fcfaba, type: 3}
+  triLines: {fileID: 0}
 --- !u!114 &1763932855 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114766778264077998, guid: 7daa9121a98e54e1daf7a4cfd4abe383,

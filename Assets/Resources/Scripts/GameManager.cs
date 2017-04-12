@@ -46,6 +46,8 @@ public class GameManager : MonoBehaviour {
 	public Image check2;
 	public Image check3;
 
+	public Image overlay;
+
 	public Button next_button;
 
 	public static int number_of_shots = 0;
@@ -95,6 +97,7 @@ public class GameManager : MonoBehaviour {
 			check1.enabled = false;
 			check2.enabled = false;
 			check3.enabled = false;
+			overlay.enabled = false;
 		}
 	}
 
@@ -116,23 +119,22 @@ public class GameManager : MonoBehaviour {
 		Vector3 results = determine_results();
 		//print (results);
 		if (results [0] == 1.0f) {
-			Sprite new_sprite = Resources.Load<Sprite> ("Sprites/gold_star");
+			Sprite new_sprite = Resources.Load<Sprite> ("Sprites/fancystar");
 			star1.sprite = new_sprite;
 			check1.enabled = true;
 		}
 		if (results [1] == 1.0f) {
-			Sprite new_sprite = Resources.Load<Sprite> ("Sprites/gold_star");
+			Sprite new_sprite = Resources.Load<Sprite> ("Sprites/fancystar");
 			star2.sprite = new_sprite;
 			check2.enabled = true;
 		}
 		if (results [2] == 1.0f) {
-			Sprite new_sprite = Resources.Load<Sprite> ("Sprites/gold_star");
+			Sprite new_sprite = Resources.Load<Sprite> ("Sprites/fancystar");
 			star3.sprite = new_sprite;
 			check3.enabled = true;
 		}
-		goal1.text = "Reach the food";
-		goal1.color = Color.black;
-		goal2.text = "Activate all resonators";
+		goal1.text = "Level Completed";
+		goal2.text = "All Resonators Activated";
 		goal3.text = "3 shots or less";
 		image1.enabled = true;
 		image2.enabled = true;
@@ -143,6 +145,7 @@ public class GameManager : MonoBehaviour {
 		star1.enabled = true;
 		star2.enabled = true;
 		star3.enabled = true;
+		overlay.enabled = true;
 	}
 
 	public void restart_button_click(){
