@@ -22,6 +22,7 @@ public class BigRotation : MonoBehaviour {
 	//	public GameObject sqrRes;	//	for variable radius and instantiation of resonators
 
 	public int rotateSpeed;
+	public GameObject[] lines;
 
 	GameObject[] members;
 
@@ -88,15 +89,17 @@ public class BigRotation : MonoBehaviour {
 		if (!isRotating) {
 			isRotating = true;
 
-            print(clockwise);
-            print(currentAngle);
-            print(targetAngle);
+			Color old_color = lines [0].GetComponent<Renderer> ().material.color;
+			for (int i = 0; i < lines.Length; i++) {
+				lines [i].GetComponent<Renderer> ().material.color = Color.yellow;
+			}
 
             if (clockwise == true)
             {
 
                 while (targetAngle.z < currentAngle.z)
                 {
+					
                     currentAngle = new Vector3(0, 0, Mathf.MoveTowardsAngle(currentAngle.z, targetAngle.z, Time.deltaTime * rotateSpeed));
                     transform.eulerAngles = currentAngle;
                     yield return null;
@@ -111,6 +114,9 @@ public class BigRotation : MonoBehaviour {
                     yield return null;
                 }
             }
+			for (int i = 0; i < lines.Length; i++) {
+				lines [i].GetComponent<Renderer> ().material.color = old_color;
+			}
 
             isRotating = false;
 		}
