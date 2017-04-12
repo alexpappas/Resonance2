@@ -20,10 +20,10 @@ MonoBehaviour:
     y: 30
     width: 1424
     height: 755
-  m_MinSize: {x: 681, y: 492}
-  m_MaxSize: {x: 14004, y: 14042}
+  m_MinSize: {x: 681, y: 342}
+  m_MaxSize: {x: 12006, y: 8042}
   vertical: 0
-  controlID: 1535
+  controlID: 5287
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -120,10 +120,10 @@ MonoBehaviour:
     y: 0
     width: 1115
     height: 755
-  m_MinSize: {x: 404, y: 492}
-  m_MaxSize: {x: 10002, y: 14042}
+  m_MinSize: {x: 404, y: 342}
+  m_MaxSize: {x: 8004, y: 8042}
   vertical: 1
-  controlID: 1536
+  controlID: 5288
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 1487
+  controlID: 5235
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -201,9 +201,9 @@ MonoBehaviour:
     height: 418
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e8d6ffff
-    m_LastClickedID: -10520
-    m_ExpandedIDs: e8d6fffffed6ffffaed8ffff1adaffff24deffffd2eaffffd8ecffff8af0ffff24f1ffff1af5ffff58f6ffff00000000
+    m_SelectedIDs: aa280000
+    m_LastClickedID: 0
+    m_ExpandedIDs: eabfffffe8d6fffffed6ffffaed8ffff1adaffff24deffffd2eaffffd8ecffff8af0ffff24f1ffff1af5ffff58f6ffff0000000080380000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -244,8 +244,8 @@ MonoBehaviour:
     y: 0
     width: 893
     height: 439
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 8}
@@ -371,14 +371,14 @@ MonoBehaviour:
     y: 439
     width: 1115
     height: 316
-  m_MinSize: {x: 232, y: 271}
-  m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 11}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 11}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -416,18 +416,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Resources/Scripts
+    - Assets/Resources/prefabs
   m_ViewMode: 1
   m_StartGridSize: 50
   m_LastFolders:
-  - Assets/Resources/Scripts
+  - Assets/Resources/prefabs
   m_LastFoldersGridSize: 50
   m_LastProjectPath: /Users/hallowmarshmallow/Documents/Unity/Resonance
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b2280000
-    m_LastClickedID: 10418
+    m_SelectedIDs: b0280000
+    m_LastClickedID: 10416
     m_ExpandedIDs: 00000000722700009828000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -481,9 +481,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: e8d6ffff
-    m_LastClickedInstanceID: -10520
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: aa280000
+    m_LastClickedInstanceID: 10410
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: fc2500006427000028250000a4250000c42500005e250000a225000066260000aa25000064250000ca250000d82b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

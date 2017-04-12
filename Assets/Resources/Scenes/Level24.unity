@@ -1362,6 +1362,11 @@ MonoBehaviour:
   shouldRotateHalf: 1
   clockwise: 0
   rotateSpeed: 20
+  lines:
+  - {fileID: 385810833}
+  - {fileID: 753796008}
+  - {fileID: 735336348}
+  - {fileID: 1517985638}
 --- !u!4 &1482241241
 Transform:
   m_ObjectHideFlags: 0

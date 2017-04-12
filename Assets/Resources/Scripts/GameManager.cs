@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour {
 
 	private int score_or_go_next = 0;
 
+	public bool resultsDisplaying;
 
 	void Start () {
 		stages = new string[] {
@@ -68,7 +69,10 @@ public class GameManager : MonoBehaviour {
 			"Level01",
 			"Level02",
 			"Level03",
-			"Level24"
+			"Level24", 
+			"Level25",
+			"Level26",
+			"Level27"
 		};
 
 		if (SceneManager.GetActiveScene ().name == "TitleScreen") {
@@ -114,6 +118,8 @@ public class GameManager : MonoBehaviour {
 	}
 
 	private void display_score() {
+
+		resultsDisplaying = true;
 
 		// Game Scoring Stuff
 		Vector3 results = determine_results();
@@ -179,6 +185,8 @@ public class GameManager : MonoBehaviour {
 			levelComplete = false;
 			score_or_go_next = 0;
 			GameManager.number_of_shots = 0;
+
+			resultsDisplaying = false;
 		}
 	}
 

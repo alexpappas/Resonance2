@@ -54,6 +54,7 @@
      <Compile Include="Assets\OSCHandler.cs" />
      <Compile Include="Assets\Resources\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Resources\Scripts\BigRotation.cs" />
+     <Compile Include="Assets\Resources\Scripts\DisappearingText.cs" />
      <Compile Include="Assets\Resources\Scripts\FoodScript.cs" />
      <Compile Include="Assets\Resources\Scripts\GUIHandler.cs" />
      <Compile Include="Assets\Resources\Scripts\GameManager.cs" />
