@@ -49,6 +49,7 @@ public class ResonatorScript : MonoBehaviour {
 
 	//	has it been turned on at least once?
 	public bool hasBeenActivated;
+	private bool should_increment_counter;
 
 	//	color when it is not resonating
 	Color noRes = new Vector4(0.133f, 0.2f, 0.7f, 1.0f);
@@ -66,6 +67,7 @@ public class ResonatorScript : MonoBehaviour {
 		//	nothing is resonating on start
 		isResonating = false;
 		hasBeenActivated = false;
+		should_increment_counter = true;
 
 		GetComponent<Renderer>().material.color = noRes;
 
@@ -86,6 +88,7 @@ public class ResonatorScript : MonoBehaviour {
 		} else if (this.GetComponentInParent<BigRotation> ().isRotating) {
 			isResonating = false;
 			hasBeenActivated = false;
+			should_increment_counter = false;
 			SetMyColor ();
 			CancelInvoke ("ExecutePulse");
 		}
@@ -94,8 +97,10 @@ public class ResonatorScript : MonoBehaviour {
 	//	I HAVE BEEN ACTIVATED BY ANOTHER PULSE!
 	void OnTriggerEnter2D(Collider2D coll) {
 
-		if (!hasBeenActivated) {
+		if (!hasBeenActivated && should_increment_counter) {
 			GameManager.count_of_activated_resonators++;
+			print(GameManager.count_of_activated_resonators);
+				
 		}
 
 		hasBeenActivated = true;
