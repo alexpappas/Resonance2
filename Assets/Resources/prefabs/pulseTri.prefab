@@ -578,14 +578,20 @@ TrailRenderer:
       - serializedVersion: 2
         time: 0
         value: 1
-        inSlope: 0
-        outSlope: 0
+        inSlope: -0.21390381
+        outSlope: -0.21390381
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.7055795
+        value: 0.9949795
+        inSlope: -0.12366869
+        outSlope: -0.12366869
         tangentMode: 0
       - serializedVersion: 2
         time: 1
         value: 0
-        inSlope: 0
-        outSlope: 0
+        inSlope: -1.4229248
+        outSlope: -1.4229248
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -668,14 +674,20 @@ TrailRenderer:
       - serializedVersion: 2
         time: 0
         value: 1
-        inSlope: 0
-        outSlope: 0
+        inSlope: -0.21390381
+        outSlope: -0.21390381
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.7055795
+        value: 0.9949795
+        inSlope: -0.12366869
+        outSlope: -0.12366869
         tangentMode: 0
       - serializedVersion: 2
         time: 1
         value: 0
-        inSlope: 0
-        outSlope: 0
+        inSlope: -1.4229248
+        outSlope: -1.4229248
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -758,14 +770,20 @@ TrailRenderer:
       - serializedVersion: 2
         time: 0
         value: 1
-        inSlope: 0
-        outSlope: 0
+        inSlope: -0.21390381
+        outSlope: -0.21390381
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.7055795
+        value: 0.9949795
+        inSlope: -0.12366869
+        outSlope: -0.12366869
         tangentMode: 0
       - serializedVersion: 2
         time: 1
         value: 0
-        inSlope: 0
-        outSlope: 0
+        inSlope: -1.4229248
+        outSlope: -1.4229248
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
