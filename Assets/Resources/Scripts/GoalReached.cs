@@ -13,7 +13,7 @@ public class GoalReached : MonoBehaviour {
 
 
 		if (!isActive) {
-
+			print ("goal Reached");
 			isActive = true;
 
 			//	changes appearance

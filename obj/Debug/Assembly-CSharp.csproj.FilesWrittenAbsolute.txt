@@ -107,3 +107,4 @@
 /Users/hallowmarshmallow/Documents/Unity/Resonance/Temp/bin/Debug/nunit.framework.dll
 >>>>>>> Stashed changes
 /Users/hallowmarshmallow/Documents/Unity/Resonance/Temp/bin/Debug/nunit.framework.xml
+/Users/adriencogny/OneDrive/Documents/NYU Poly/Senior Year/S_2017/Game_Design/FinalProject/Resonance2/Temp/bin/Debug/nunit.framework.xml

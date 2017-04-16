@@ -273,14 +273,29 @@ public class GameManager : MonoBehaviour {
 	
 		if (goalReached == true) {
 
-			if (timeBeforeScore < maxTimeBeforeScore) {
-				timeBeforeScore = timeBeforeScore + Time.deltaTime;
-				print (timeBeforeScore);
-			} else {
-				print ("Score will be displayed now");
-				next_stage_button_click ();
-				goalReached = false;//now that we have displayed the score we can set goalreached to false
+			//timeBeforeScore >= 0 if the goal is reached and the ui hasn't been displayed yet.
+			//timeBeforeScore < 0 if the goal ui has been displayed and we are waiting for the space bar to be pressed.
+			if (timeBeforeScore >= 0){ 
+				
+				if (timeBeforeScore < maxTimeBeforeScore) {
+					timeBeforeScore = timeBeforeScore + Time.deltaTime;
+					print (timeBeforeScore);
+				} else {
+					print ("Score will be displayed now");
+					next_stage_button_click ();
+					//now that we have displayed the ui can set the timebeforescore to a negative value to wait for spacebar press.
+					timeBeforeScore = -10.0f;
+				}
 			}
+			else{
+
+				if (Input.GetKeyDown (KeyCode.Space)) {
+					print ("Space has been pressed ");
+					next_stage_button_click ();
+				}
+
+			}
+
 		}
 
 	}
