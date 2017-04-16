@@ -56,6 +56,15 @@ public class GameManager : MonoBehaviour {
 
 	public bool resultsDisplaying;
 
+
+	//score display
+	bool goalReached = false;
+
+	float timeBeforeScore = 0.0f;
+	float maxTimeBeforeScore = 5.0f;
+
+
+
 	void Start () {
 		stages = new string[] {
 			"TitleScreen",
@@ -251,6 +260,28 @@ public class GameManager : MonoBehaviour {
 		levelComplete = true;
 		GameObject nextButton = GameObject.Find ("Next");
 		nextButton.SetActive (true);
+
+		print ("Goal has been reached");
+		goalReached = true;
+
+		//get stuck in this routing for 5 seconds;
 		nextButton.GetComponent<Button> ().interactable = true;
+	}
+		
+	void Update()
+	{
+	
+		if (goalReached == true) {
+
+			if (timeBeforeScore < maxTimeBeforeScore) {
+				timeBeforeScore = timeBeforeScore + Time.deltaTime;
+				print (timeBeforeScore);
+			} else {
+				print ("Score will be displayed now");
+				next_stage_button_click ();
+				goalReached = false;//now that we have displayed the score we can set goalreached to false
+			}
+		}
+
 	}
 }
