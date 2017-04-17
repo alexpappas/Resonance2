@@ -15,6 +15,7 @@ public class GoalReached : MonoBehaviour {
 		if (!isActive) {
 			print ("goal Reached");
 			isActive = true;
+			reset_pop_window.out_of_moves = false;
 
 			//	changes appearance
 			this.GetComponent<SpriteRenderer> ().sprite = activeGoal;
