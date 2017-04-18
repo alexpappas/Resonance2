@@ -15,6 +15,7 @@ public class reset_pop_window : MonoBehaviour {
 	void Start () {
 		Vector3 position = new Vector3 (900, 100, 0);
 		tomove.transform.position = position;
+		tomove.transform.localScale = new Vector3 (1, 1, 1);
 		stage_name.text = SceneManager.GetActiveScene ().name;
 	}
 
