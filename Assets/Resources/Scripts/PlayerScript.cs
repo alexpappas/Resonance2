@@ -124,7 +124,6 @@ public class PlayerScript : MonoBehaviour {
 	//	(if numSides is 4 it will instantiate the sqrPulse prefab)
 	//	(if it has fewer than 3 sides it will not pulse
 	void ExecutePulse() {
-
 		//print ("Pulse strength = " + (pulseForce/numSides));
 		if (numSides >= 6) {
 			GameManager.number_of_shots++;
@@ -167,13 +166,14 @@ public class PlayerScript : MonoBehaviour {
 			}
 			AudioManager.instance.PlayerPulse (numSides);
 			numSides = numSides - 1;
+			reset_pop_window.out_of_moves = true;
+
 			//GameManager.instance.DecrementNumSides ();
 
 		}
-		else if (numSides < 3) {
+		//else if (numSides < 3) {
 			//print ("no pulse");
-		}
-
+		//}
 		//	after pulse resets appearance
 		SetSprite ();
 
