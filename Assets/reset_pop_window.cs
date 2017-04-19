@@ -15,6 +15,7 @@ public class reset_pop_window : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//tomove.GetComponent<RectTransform> ().localPosition = new Vector3 (432, -92, 0);
+		time_started = 0f;
 		tomove.transform.localScale = new Vector3 (1, 1, 1);
 		stage_name.text = SceneManager.GetActiveScene ().name;
 	}
@@ -35,6 +36,7 @@ public class reset_pop_window : MonoBehaviour {
 
 		if (time_started > 2f) {
 			finished = true;
+			time_started = 0f;
 		}
 
 	}

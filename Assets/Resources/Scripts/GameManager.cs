@@ -131,6 +131,8 @@ public class GameManager : MonoBehaviour {
 		return result;
 	}
 
+
+
 	private void display_score() {
 
 		resultsDisplaying = true;
@@ -171,6 +173,8 @@ public class GameManager : MonoBehaviour {
 	public void restart_button_click(){
 		Application.LoadLevel(Application.loadedLevel);
 		GameManager.number_of_shots = 0;
+		reset_pop_window.finished = false;
+		reset_pop_window.out_of_moves = false;
 	}
 
 	public void pause_button_click(){
