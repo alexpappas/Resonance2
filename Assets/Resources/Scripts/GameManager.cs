@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour {
 
 
 	void Start () {
-
+		timeBeforeScore = 0;
 		Instantiate(Resources.Load("prefabs/AudioManager"));
 
 		stages = new string[] {
@@ -277,26 +277,32 @@ public class GameManager : MonoBehaviour {
 	public void GoalReached() {
 		levelComplete = true;
 		GameObject nextButton = GameObject.Find ("Next");
-		nextButton.SetActive (true);
+		//nextButton.SetActive (true);
 
 		print ("Goal has been reached");
 		goalReached = true;
 
 		//get stuck in this routing for 5 seconds;
-		nextButton.GetComponent<Button> ().interactable = true;
+		//nextButton.GetComponent<Button> ().interactable = true;
 	}
 		
 	void Update()
 	{
-	
+		//print ("updating");
 		if (goalReached == true) {
-
+			//print("goal reached = true");
 			//timeBeforeScore >= 0 if the goal is reached and the ui hasn't been displayed yet.
 			//timeBeforeScore < 0 if the goal ui has been displayed and we are waiting for the space bar to be pressed.
 			if (timeBeforeScore >= 0){ 
 				
 				if (timeBeforeScore < maxTimeBeforeScore) {
 					timeBeforeScore = timeBeforeScore + Time.deltaTime;
+					//if the player wants to exit, they can also just hit space.
+					if (Input.GetKeyDown (KeyCode.Space)) {
+						print ("Space has been pressed ");
+						print ("going to next level");
+						timeBeforeScore = maxTimeBeforeScore;
+					}
 					//print (timeBeforeScore);
 				} else {
 					print ("Score will be displayed now");
@@ -309,7 +315,10 @@ public class GameManager : MonoBehaviour {
 
 				if (Input.GetKeyDown (KeyCode.Space)) {
 					print ("Space has been pressed ");
+					print ("going to next level");
 					next_stage_button_click ();
+					goalReached = false;
+					timeBeforeScore = 0;
 				}
 
 			}

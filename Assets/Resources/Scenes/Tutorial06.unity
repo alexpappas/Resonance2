@@ -3289,6 +3289,14 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1798812525858060, guid: 7daa9121a98e54e1daf7a4cfd4abe383, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204959681080842, guid: 7daa9121a98e54e1daf7a4cfd4abe383, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7daa9121a98e54e1daf7a4cfd4abe383, type: 2}
   m_IsPrefabParent: 0
@@ -3537,7 +3545,6 @@ MonoBehaviour:
   sprite4: {fileID: 21300000, guid: 785ae3d9b56fd4a33b7782dc5d406bba, type: 3}
   sprite5: {fileID: 21300000, guid: 86651760c582c45b1b88b707dbc188f2, type: 3}
   sprite6: {fileID: 21300000, guid: 96ba80c5b71a04932bedcd05e9fcfaba, type: 3}
-  triLines: {fileID: 0}
 --- !u!1 &1978875606
 GameObject:
   m_ObjectHideFlags: 0
