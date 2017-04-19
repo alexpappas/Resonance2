@@ -10,30 +10,34 @@ public class buttons_control : MonoBehaviour {
 	public EventSystem eventsystem;
 	private string[] stages;
 	private bool helper_bool = false;
+	private static bool booted = false;
+
+	public static Dictionary<string, Vector3> data;
 
 	// Use this for initialization
 	void Start () {
 		helper_bool = false;
-		stages = new string[] {
-			"TitleScreen",
-			"Tutorial01",
-			"Tutorial02",
-			"Tutorial02a",
-			"Tutorial01c",
-			"Tutorial01d",
-			"Tutorial04",
-			"Tutorial05",
-			"Tutorial05a",
-			"Level02",
-			"Level03",
-			"Level04",
-			"Level05",
-			"Level06",
-			"Level24", 
-			"Level25",
-			"Level26",
-			"Level27"
-		};
+		if (!booted) {
+			data = new Dictionary<string, Vector3> ();
+			foreach (Button b in GameObject.Find ("tutorial").GetComponentsInChildren<Button> ()) {
+				Vector3 v = new Vector3 (0, 0, 0);
+				string s = b.GetComponentInChildren<Text> ().text;
+				data [s] = v;
+			}
+			foreach (Button b in GameObject.Find ("symmetry").GetComponentsInChildren<Button> ()) {
+				Vector3 v = new Vector3 (0, 0, 0);
+				string s = b.GetComponentInChildren<Text> ().text;
+				data [s] = v;
+			}
+			foreach (Button b in GameObject.Find ("rotation").GetComponentsInChildren<Button> ()) {
+				Vector3 v = new Vector3 (0, 0, 0);
+				string s = b.GetComponentInChildren<Text> ().text;
+				data [s] = v;
+			}
+			booted = true;
+		}
+
+
 	}
 	
 	// Update is called once per frame
@@ -50,5 +54,46 @@ public class buttons_control : MonoBehaviour {
 				
 		}
 		
+	}
+	void Awake() {
+		
+		if (booted) {
+			Sprite new_sprite = Resources.Load<Sprite> ("Sprites/fancystar");
+
+			foreach (Button b in GameObject.Find ("tutorial").GetComponentsInChildren<Button> ()) {
+				if (data [b.GetComponentInChildren<Text> ().text] [0] == 1) {
+					b.GetComponentsInChildren<Image> () [3].sprite = new_sprite;
+				}
+				if (data [b.GetComponentInChildren<Text> ().text] [1] == 1) {
+					b.GetComponentsInChildren<Image> () [1].sprite = new_sprite;
+				}
+				if (data [b.GetComponentInChildren<Text> ().text] [2] == 1) {
+					b.GetComponentsInChildren<Image> () [2].sprite = new_sprite;
+				}
+
+			}
+			foreach (Button b in GameObject.Find ("symmetry").GetComponentsInChildren<Button> ()) {
+				if (data [b.GetComponentInChildren<Text> ().text] [0] == 1) {
+					b.GetComponentsInChildren<Image> () [3].sprite = new_sprite;
+				}
+				if (data [b.GetComponentInChildren<Text> ().text] [1] == 1) {
+					b.GetComponentsInChildren<Image> () [1].sprite = new_sprite;
+				}
+				if (data [b.GetComponentInChildren<Text> ().text] [2] == 1) {
+					b.GetComponentsInChildren<Image> () [2].sprite = new_sprite;
+				}
+			}
+			foreach (Button b in GameObject.Find ("rotation").GetComponentsInChildren<Button> ()) {
+				if (data [b.GetComponentInChildren<Text> ().text] [0] == 1) {
+					b.GetComponentsInChildren<Image> () [3].sprite = new_sprite;
+				}
+				if (data [b.GetComponentInChildren<Text> ().text] [1] == 1) {
+					b.GetComponentsInChildren<Image> () [1].sprite = new_sprite;
+				}
+				if (data [b.GetComponentInChildren<Text> ().text] [2] == 1) {
+					b.GetComponentsInChildren<Image> () [2].sprite = new_sprite;
+				}
+			}
+		}
 	}
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 
 public class reset_pop_window : MonoBehaviour {
@@ -38,8 +39,26 @@ public class reset_pop_window : MonoBehaviour {
 			finished = true;
 			time_started = 0f;
 		}
+		if (Input.GetMouseButton (0)) {
+			try {
+				GameObject a = EventSystem.current.currentSelectedGameObject;
+				Button b = a.GetComponent<Button>();
+				if (b.name == "Button (1)") {
+					GameManager.number_of_shots = 0;
+					reset_pop_window.finished = false;
+					reset_pop_window.out_of_moves = false;
+					SceneManager.LoadScene("Level_Select", LoadSceneMode.Single);
+				}
+
+			} finally {
+			}
+
+		}
+
 
 	}
+
+
 
 
 
