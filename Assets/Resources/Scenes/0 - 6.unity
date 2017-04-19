@@ -280,7 +280,6 @@ MonoBehaviour:
   sprite4: {fileID: 21300000, guid: c184303e8a1434b4781f4fe2cf91d31d, type: 3}
   sprite5: {fileID: 21300000, guid: 7581800ea49304435b379b0577696d2d, type: 3}
   sprite6: {fileID: 21300000, guid: 96ba80c5b71a04932bedcd05e9fcfaba, type: 3}
-  triLines: {fileID: 0}
 --- !u!212 &443434938
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -430,10 +429,6 @@ Prefab:
     - target: {fileID: 4560612153192314, guid: e0ca9c003fa04448892b4904ee5160cd, type: 2}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4560612153192314, guid: e0ca9c003fa04448892b4904ee5160cd, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0ca9c003fa04448892b4904ee5160cd, type: 2}
