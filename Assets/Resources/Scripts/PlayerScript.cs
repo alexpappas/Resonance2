@@ -60,9 +60,12 @@ public class PlayerScript : MonoBehaviour {
 
 	//this is for the aiming line rendering, prefab objects
 	//public GameObject triLines;
-
+	void Start() {
+		numSides = 5;
+	}
 	void Awake()
 	{
+		numSides = 5;
 		//	set the instance value to self.
 		if (instance == null) {
 			instance = this;

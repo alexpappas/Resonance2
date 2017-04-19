@@ -13,6 +13,7 @@
 
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -82,6 +83,7 @@ public class GameManager : MonoBehaviour {
 			"1 - 3",
 			"1 - 4",
 			"1 - 5",
+			"1 - 6",
 			"2 - 1",
 			"2 - 2", 
 			"2 - 3",
@@ -135,6 +137,14 @@ public class GameManager : MonoBehaviour {
 		if (count_of_activated_resonators == count_of_resonators) {
 			result [1] = 1;
 		}
+		if (buttons_control.data == null) {
+			buttons_control.data = new Dictionary<string, Vector3> ();
+			for (int i = 1; i < stages.Length; i++) {
+				buttons_control.data [stages [i]] = new Vector3 (0, 0, 0);
+			}
+			buttons_control.booted = true;
+			buttons_control.data[SceneManager.GetActiveScene ().name] = result;
+		}
 		buttons_control.data[SceneManager.GetActiveScene ().name] = result;
 		return result;
 	}
@@ -179,10 +189,11 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void restart_button_click(){
-		Application.LoadLevel(Application.loadedLevel);
 		GameManager.number_of_shots = 0;
 		reset_pop_window.finished = false;
 		reset_pop_window.out_of_moves = false;
+		Application.LoadLevel(Application.loadedLevel);
+
 	}
 
 	public void menu_button_click(){
@@ -214,11 +225,14 @@ public class GameManager : MonoBehaviour {
 					next = i + 1;
 				}
 			}
+			GameManager.number_of_shots = 0;
+			reset_pop_window.finished = false;
+			reset_pop_window.out_of_moves = false;
 			SceneManager.LoadScene(stages[next], LoadSceneMode.Single);
 
 			levelComplete = false;
 			score_or_go_next = 0;
-			GameManager.number_of_shots = 0;
+
 
 			resultsDisplaying = false;
 		}
@@ -299,13 +313,13 @@ public class GameManager : MonoBehaviour {
 					timeBeforeScore = timeBeforeScore + Time.deltaTime;
 					//if the player wants to exit, they can also just hit space.
 					if (Input.GetKeyDown (KeyCode.Space)) {
-						print ("Space has been pressed ");
-						print ("going to next level");
+				//		print ("Space has been pressed ");
+			//			print ("going to next level");
 						timeBeforeScore = maxTimeBeforeScore;
 					}
 					//print (timeBeforeScore);
 				} else {
-					print ("Score will be displayed now");
+		//			print ("Score will be displayed now");
 					next_stage_button_click ();
 					//now that we have displayed the ui can set the timebeforescore to a negative value to wait for spacebar press.
 					timeBeforeScore = -10.0f;
@@ -314,8 +328,8 @@ public class GameManager : MonoBehaviour {
 			else{
 
 				if (Input.GetKeyDown (KeyCode.Space)) {
-					print ("Space has been pressed ");
-					print ("going to next level");
+				//	print ("Space has been pressed ");
+			//		print ("going to next level");
 					next_stage_button_click ();
 					goalReached = false;
 					timeBeforeScore = 0;

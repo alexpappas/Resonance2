@@ -10,7 +10,7 @@ public class buttons_control : MonoBehaviour {
 	public EventSystem eventsystem;
 	private string[] stages;
 	private bool helper_bool = false;
-	private static bool booted = false;
+	public static bool booted = false;
 
 	public static Dictionary<string, Vector3> data;
 
@@ -18,6 +18,7 @@ public class buttons_control : MonoBehaviour {
 	void Start () {
 		helper_bool = false;
 		if (!booted) {
+			print ("TRIEEGGGGERED!");
 			data = new Dictionary<string, Vector3> ();
 			foreach (Button b in GameObject.Find ("tutorial").GetComponentsInChildren<Button> ()) {
 				Vector3 v = new Vector3 (0, 0, 0);
@@ -36,7 +37,7 @@ public class buttons_control : MonoBehaviour {
 			}
 			booted = true;
 		}
-
+		update_ui ();
 
 	}
 	
@@ -56,7 +57,10 @@ public class buttons_control : MonoBehaviour {
 		
 	}
 	void Awake() {
-		
+		update_ui ();
+
+	}
+	void update_ui() {
 		if (booted) {
 			Sprite new_sprite = Resources.Load<Sprite> ("Sprites/fancystar");
 
@@ -73,6 +77,7 @@ public class buttons_control : MonoBehaviour {
 
 			}
 			foreach (Button b in GameObject.Find ("symmetry").GetComponentsInChildren<Button> ()) {
+				print (b.GetComponentInChildren<Text> ().text);
 				if (data [b.GetComponentInChildren<Text> ().text] [0] == 1) {
 					b.GetComponentsInChildren<Image> () [3].sprite = new_sprite;
 				}
