@@ -98,9 +98,7 @@ public class ResonatorScript : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D coll) {
 
 		if (!hasBeenActivated && should_increment_counter) {
-			GameManager.count_of_activated_resonators++;
-			print(GameManager.count_of_activated_resonators);
-				
+			GameManager.count_of_activated_resonators++;				
 		}
 
 		hasBeenActivated = true;

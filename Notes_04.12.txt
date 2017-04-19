@@ -1,0 +1,19 @@
+1. Make more graphics on resonators!
+
+2. Do I win? You need better effects when people win.
+
+3. How do I progess levels?
+
+4. Number of shots is limited is not clear.
+
+5. Reset should be in the center of screen.
+
+6. How do you get sound into Unity? Should make it easy to export to someone.
+
+7. Work more on those buttons!
+
+8. I can't tell where each thing will go. Be clear!
+
+9. Exploration // Puzzly are different things. You should balance them.
+
+10. Do some rendering when pulse are coming out.

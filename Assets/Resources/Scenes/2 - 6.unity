@@ -692,6 +692,69 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a80d141268a14a1a9437729932d7046, type: 2}
   m_IsPrefabParent: 0
+<<<<<<< Updated upstream:Assets/Resources/Scenes/2 - 6.unity
+=======
+--- !u!1001 &1389416150
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1114560095}
+    m_Modifications:
+    - target: {fileID: 4490055786977862, guid: 744bc602e2e3f4fc9b06a7ec3145118a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -169.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490055786977862, guid: 744bc602e2e3f4fc9b06a7ec3145118a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3762
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490055786977862, guid: 744bc602e2e3f4fc9b06a7ec3145118a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490055786977862, guid: 744bc602e2e3f4fc9b06a7ec3145118a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490055786977862, guid: 744bc602e2e3f4fc9b06a7ec3145118a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490055786977862, guid: 744bc602e2e3f4fc9b06a7ec3145118a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490055786977862, guid: 744bc602e2e3f4fc9b06a7ec3145118a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490055786977862, guid: 744bc602e2e3f4fc9b06a7ec3145118a, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490055786977862, guid: 744bc602e2e3f4fc9b06a7ec3145118a, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490055786977862, guid: 744bc602e2e3f4fc9b06a7ec3145118a, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114816698769049044, guid: 744bc602e2e3f4fc9b06a7ec3145118a,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1114560096}
+    - target: {fileID: 114816698769049044, guid: 744bc602e2e3f4fc9b06a7ec3145118a,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: restart_button_click
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 744bc602e2e3f4fc9b06a7ec3145118a, type: 2}
+  m_IsPrefabParent: 0
+>>>>>>> Stashed changes:Assets/Resources/Scenes/Level06.unity
 --- !u!1001 &1430081808
 Prefab:
   m_ObjectHideFlags: 0
