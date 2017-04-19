@@ -43,21 +43,6 @@ public class PulseScript : MonoBehaviour {
 
 		rb = GetComponent<Rigidbody2D> ();
 
-
-		//	Instantiate Color Trail
-/*		myDrag = (GameObject)Instantiate (Resources.Load ("prefabs/pulseDrag"), transform.position, transform.rotation);
-		myDrag.transform.SetParent (this.transform);
-		myDrag.transform.localPosition = new Vector3 (-4, 0, 0);
-		myDrag.transform.localScale = new Vector3 (4, 1, 1);
-*/
-
-
-		//	Instantiate Particle Trail
-//		GameObject myParticles = (GameObject)Instantiate (Resources.Load ("prefabs/pulseTrail"), transform.position, transform.rotation);
-//		myParticles.transform.SetParent (this.transform);
-//		myParticles.transform.localPosition = new Vector3 (-2, 0, 0);
-//		myParticles.transform.localScale = new Vector3 (1, 1, 1);
-
 		//	when it is instantiated (as a part of a pulse group) by the PlayerScript it starts moving outward
 		Pulse ();
 	}
@@ -68,17 +53,7 @@ public class PulseScript : MonoBehaviour {
 		//	the color starts white but as the pulse slows down it becomes more transparent
 		colorStart.a = Mathf.Abs (rb.velocity.magnitude);
 		GetComponent<Renderer>().material.color = colorStart;
-
-
-		/*
-		float trailLength = myDrag.transform.localScale.x;
-		myDrag.transform.localScale = new Vector3(2 * Mathf.Abs(rb.velocity.magnitude), 1, 1);
-		trailLength += myDrag.transform.localScale.x;
-		trailLength *= -0.5f;
-		myDrag.transform.localPosition = new Vector3 (trailLength, 0, 0);
-*/
-
-
+	
 		//	this is buggy... give it enough time to stabilize before it destroys itself
 		//	it was trying to destroy itself like RIGHT when it was created
 		//	now it waits for 20 frames before it tries to destroy itself

@@ -43,6 +43,15 @@ public class AudioManager : MonoBehaviour {
 		
 			InitializeSounds ();
 		}
+
+		//	allows for smoother transitions between scenes
+		DontDestroyOnLoad (this.transform);
+
+		//print ("AM init");
+	}
+
+	void Start () {
+		//print ("AM start");
 	}
 		
 	//	sends player pulse information to Max
@@ -58,7 +67,6 @@ public class AudioManager : MonoBehaviour {
 				playerVoice.clip = squareSounds [currentClip];			
 			} else if (x == 5) {
 				currentClip = 1 + Random.Range (0, (pentagonSounds.Length - 1));
-				print (currentClip);
 				playerVoice.clip = pentagonSounds [currentClip];
 			}
 

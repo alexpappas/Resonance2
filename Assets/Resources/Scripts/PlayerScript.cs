@@ -59,7 +59,7 @@ public class PlayerScript : MonoBehaviour {
 
 
 	//this is for the aiming line rendering, prefab objects
-	public GameObject triLines;
+	//public GameObject triLines;
 
 	void Awake()
 	{
@@ -211,8 +211,8 @@ public class PlayerScript : MonoBehaviour {
 		if (numSides == 3) {	//	you have 3 sides, you are a triangle
 			this.GetComponent<SpriteRenderer> ().sprite = sprite3;
 			//	instantiate triLines
-			GameObject s = Instantiate (triLines, transform.position, transform.rotation);
-			s.transform.SetParent (this.transform);
+			//GameObject s = Instantiate (triLines, transform.position, transform.rotation);
+			//s.transform.SetParent (this.transform);
 		}
 		if (numSides == 4)	//	you have 4 sides, you are a square
 			this.GetComponent<SpriteRenderer> ().sprite = sprite4;

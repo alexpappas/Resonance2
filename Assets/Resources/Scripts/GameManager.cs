@@ -61,30 +61,33 @@ public class GameManager : MonoBehaviour {
 	bool goalReached = false;
 
 	float timeBeforeScore = 0.0f;
-	float maxTimeBeforeScore = 5.0f;
+	float maxTimeBeforeScore = 3.0f;
 
 
 
 	void Start () {
+
+		Instantiate(Resources.Load("prefabs/AudioManager"));
+
 		stages = new string[] {
 			"TitleScreen",
-			"Tutorial01",
-			"Tutorial02",
-			"Tutorial02a",
-			"Tutorial01c",
-			"Tutorial01d",
-			"Tutorial04",
-			"Tutorial05",
-			"Tutorial05a",
-			"Level02",
-			"Level03",
-			"Level04",
-			"Level05",
-			"Level06",
-			"Level24", 
-			"Level25",
-			"Level26",
-			"Level27"
+			"0 - 1",
+			"0 - 2",
+			"0 - 3",
+			"0 - 4",
+			"0 - 5",
+			"0 - 6",
+			"1 - 1",
+			"1 - 2",
+			"1 - 3",
+			"1 - 4",
+			"1 - 5",
+			"2 - 1",
+			"2 - 2", 
+			"2 - 3",
+			"2 - 4",
+			"2 - 5",
+			"2 - 6"
 		};
 		levelComplete = false;
 		score_or_go_next = 0;
@@ -182,6 +185,13 @@ public class GameManager : MonoBehaviour {
 		reset_pop_window.out_of_moves = false;
 	}
 
+	public void menu_button_click(){
+		SceneManager.LoadScene("Level_Select", LoadSceneMode.Single);
+		GameManager.number_of_shots = 0;
+		reset_pop_window.finished = false;
+		reset_pop_window.out_of_moves = false;
+	}
+
 	public void pause_button_click(){
 		if (Time.timeScale == 1) {
 			Time.timeScale = 0;
@@ -222,9 +232,8 @@ public class GameManager : MonoBehaviour {
 		} else if (instance != this) {
 			Destroy (gameObject);
 		}
-			
-		//	instantiates AudioManager
-		Instantiate(Resources.Load("prefabs/AudioManager"));
+
+		//DontDestroyOnLoad (this.transform);
 
 		//	player's number of sides 
 		//	start game with 5 sides
@@ -288,7 +297,7 @@ public class GameManager : MonoBehaviour {
 				
 				if (timeBeforeScore < maxTimeBeforeScore) {
 					timeBeforeScore = timeBeforeScore + Time.deltaTime;
-					print (timeBeforeScore);
+					//print (timeBeforeScore);
 				} else {
 					print ("Score will be displayed now");
 					next_stage_button_click ();
