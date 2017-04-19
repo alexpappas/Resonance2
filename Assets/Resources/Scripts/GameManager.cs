@@ -86,6 +86,11 @@ public class GameManager : MonoBehaviour {
 			"Level26",
 			"Level27"
 		};
+		levelComplete = false;
+		score_or_go_next = 0;
+		GameManager.number_of_shots = 0;
+
+		resultsDisplaying = false;
 
 		if (SceneManager.GetActiveScene ().name == "TitleScreen") {
 			score_or_go_next = 1;
