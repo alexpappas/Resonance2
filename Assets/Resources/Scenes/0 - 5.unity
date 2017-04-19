@@ -495,7 +495,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 7581800ea49304435b379b0577696d2d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86651760c582c45b1b88b707dbc188f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -551,9 +551,9 @@ MonoBehaviour:
   sqrPulse: {fileID: 195634, guid: b7a4c0562ebd64d1d9b50eab8d9b54c1, type: 2}
   pentPulse: {fileID: 154432, guid: 6d9bb7e7ab9204047ab8839e1c42d06a, type: 2}
   hexPulse: {fileID: 178324, guid: f4e71ca38a69d45538b9b59d7466121a, type: 2}
-  sprite3: {fileID: 21300000, guid: ee37fd944da0e4cac83cb7f39eebd5d4, type: 3}
-  sprite4: {fileID: 21300000, guid: c184303e8a1434b4781f4fe2cf91d31d, type: 3}
-  sprite5: {fileID: 21300000, guid: 7581800ea49304435b379b0577696d2d, type: 3}
+  sprite3: {fileID: 21300000, guid: 83903fe6dad3d40d6a4086e9fb4bb816, type: 3}
+  sprite4: {fileID: 21300000, guid: 785ae3d9b56fd4a33b7782dc5d406bba, type: 3}
+  sprite5: {fileID: 21300000, guid: 86651760c582c45b1b88b707dbc188f2, type: 3}
   sprite6: {fileID: 21300000, guid: 96ba80c5b71a04932bedcd05e9fcfaba, type: 3}
 --- !u!1001 &2021280935
 Prefab:
