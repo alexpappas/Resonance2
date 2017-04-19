@@ -19,6 +19,9 @@ public class AudioManager : MonoBehaviour {
 	AudioClip[] squareRotationSounds;
 	AudioClip[] pentagonRotationSounds;
 
+	AudioClip[] goalSounds;
+	AudioClip[] goalTailSounds;
+
 	public AudioSource[] rotationPolyphony;
 	int rotationVoiceCounter;
 
@@ -26,6 +29,7 @@ public class AudioManager : MonoBehaviour {
 	int currentClip;
 
 	public AudioSource goalVoice;
+	public AudioSource goalTailVoice;
 
 	void Awake () {
 		//	create singleton instance of AudioManager
@@ -128,7 +132,24 @@ public class AudioManager : MonoBehaviour {
 	public void GoalBubble() {
 		if (audioON) {
 		//	OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", "bubble");
-			goalVoice.Play();
+			//currentClip = Random.Range (0, (goalSounds.Length - 1));
+			//goalVoice.clip = goalSounds [currentClip];
+			//goalVoice.Play ();
+
+			currentClip = Random.Range (0, (goalSounds.Length - 1));
+			goalTailVoice.clip = goalTailSounds[0];
+			goalTailVoice.Play ();
+
+		}
+	}
+		
+	public void SoundBarrier() {
+		if (audioON) {
+			//	OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", "bubble");
+			currentClip = Random.Range (0, (goalSounds.Length - 1));
+			goalVoice.clip = goalSounds [currentClip];
+			goalVoice.Play ();
+
 		}
 	}
 
@@ -151,6 +172,8 @@ public class AudioManager : MonoBehaviour {
 		triangleRotationSounds = Resources.LoadAll<AudioClip> ("Sounds/RotationTri");
 		squareRotationSounds = Resources.LoadAll<AudioClip> ("Sounds/RotationSqr");
 		pentagonRotationSounds = Resources.LoadAll<AudioClip> ("Sounds/RotationPent");
+		goalSounds = Resources.LoadAll<AudioClip> ("Sounds/Goal");
+		goalTailSounds = Resources.LoadAll<AudioClip> ("Sounds/GoalTail");
 
 		print (triangleRotationSounds.Length);
 
