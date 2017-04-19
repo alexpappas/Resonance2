@@ -135,7 +135,7 @@ public class GameManager : MonoBehaviour {
 		if (count_of_activated_resonators == count_of_resonators) {
 			result [1] = 1;
 		}
-
+		buttons_control.data[SceneManager.GetActiveScene ().name] = result;
 		return result;
 	}
 
