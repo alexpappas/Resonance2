@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< Updated upstream
-- path: Assets/Resources/Scenes/0 - 3.unity
-=======
-- path: Assets/Resources/Scenes/Level_Select.unity
->>>>>>> Stashed changes
+- path: Assets/Resources/cel shading/celshading.unity
   isLoaded: 1
   isActive: 1
