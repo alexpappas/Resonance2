@@ -59,6 +59,8 @@ public class ResonatorScript : MonoBehaviour {
 	//	please have fun with this!
 	public int MAXPULSES;
 
+	//public Renderer myRenderer;
+
 	//	MAXPULSES - how many times it has pulses since being turned ON
 	int pulsesRemaining;
 
@@ -70,6 +72,9 @@ public class ResonatorScript : MonoBehaviour {
 		should_increment_counter = true;
 
 		GetComponent<Renderer>().material.color = noRes;
+
+		//Material noResMaterial = Resources.Load ("celShading/CelBlue") as Material;
+		//myRenderer.GetComponent<Renderer>().material = noResMaterial;
 
 		//	here's where you can mess with pulses
 		MAXPULSES = numSides;

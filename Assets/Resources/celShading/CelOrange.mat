@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Cel Material
+  m_Name: CelOrange
   m_Shader: {fileID: 4800000, guid: 9a3747be2ec66486784874104d93ab91, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -67,14 +67,14 @@ Material:
     - _OcclusionStrength: 1
     - _OutlineThickness: 0
     - _Parallax: 0.02
-    - _Shininess: 0.863
+    - _Shininess: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 0.6, b: 0.3529412, a: 1}
+    - _Color: {r: 1, g: 0.7019608, b: 0.20392159, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
-    - _UnlitColor: {r: 0.8308824, g: 0.43054816, b: 0.18328287, a: 1}
+    - _UnlitColor: {r: 1, g: 0.5254902, b: 0.15294118, a: 1}

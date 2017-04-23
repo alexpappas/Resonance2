@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{667A8E4D-C8AA-5436-F64C-99E1A7F98835}</ProjectGuid>
+    <ProjectGuid>{1EC4266B-582F-3FF1-EF4C-D46CC3F07322}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -62,14 +62,22 @@
      <Compile Include="Assets\Resources\Scripts\PappasBigRotate.cs" />
      <Compile Include="Assets\Resources\Scripts\PlayerScript.cs" />
      <Compile Include="Assets\Resources\Scripts\PulseColor.cs" />
+     <Compile Include="Assets\Resources\Scripts\PulseDetection.cs" />
      <Compile Include="Assets\Resources\Scripts\PulseDrag.cs" />
      <Compile Include="Assets\Resources\Scripts\PulseGroupScript.cs" />
      <Compile Include="Assets\Resources\Scripts\PulseScript.cs" />
+     <Compile Include="Assets\Resources\Scripts\Resonator3D.cs" />
      <Compile Include="Assets\Resources\Scripts\ResonatorScript.cs" />
      <Compile Include="Assets\WallScript.cs" />
      <Compile Include="Assets\buttons_control.cs" />
      <Compile Include="Assets\reset_pop_window.cs" />
-     <None Include="Assets\Resources\cel shading\CelShader.shader" />
+     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
+     <None Include="Assets\Resources\celShading\CelShaderGradient.shader" />
+     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
+     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
+     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLit.shader" />
+     <None Include="Assets\Resources\celShading\myCelShader.shader" />
+     <None Include="Assets\Resources\celShading\CelShader.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
