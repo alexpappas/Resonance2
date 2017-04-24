@@ -188,6 +188,6 @@ public class Resonator3D : MonoBehaviour {
 	//	sends its identity to the music program
 	//	each resonator makes a different sound when it pulses depending on its shape
 	void SendNumSides(int x) {
-	//	AudioManager.instance.ResonatorPulse(x);
+		AudioManager.instance.ResonatorPulse(x);
 	}
 }
