@@ -61,6 +61,7 @@
      <Compile Include="Assets\Resources\Scripts\GoalReached.cs" />
      <Compile Include="Assets\Resources\Scripts\PappasBigRotate.cs" />
      <Compile Include="Assets\Resources\Scripts\PlayerScript.cs" />
+     <Compile Include="Assets\Resources\Scripts\PlayerScript3D.cs" />
      <Compile Include="Assets\Resources\Scripts\PulseColor.cs" />
      <Compile Include="Assets\Resources\Scripts\PulseDetection.cs" />
      <Compile Include="Assets\Resources\Scripts\PulseDrag.cs" />
