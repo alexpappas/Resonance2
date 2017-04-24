@@ -180,8 +180,10 @@ public class Resonator3D : MonoBehaviour {
 			myRenderer.GetComponent<Renderer>().material = resMaterial;
 		} else if (!isResonating && hasBeenActivated) {
 			myRenderer.GetComponent<Renderer>().material = noResMaterial;
+			ani.Play ("Inactive");
 		} else if (!isResonating && !hasBeenActivated) {
 			myRenderer.GetComponent<Renderer>().material = noResMaterial;
+			ani.Play ("Inactive");
 		}
 	}
 

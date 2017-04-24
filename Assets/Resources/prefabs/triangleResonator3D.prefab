@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 68598429199685728}
   m_Layer: 0
   m_Name: triangleResonator3D
-  m_TagString: Untagged
+  m_TagString: resonator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

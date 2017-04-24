@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 11499c2fc04fe4ba7b0206e0d5be0c9e
+timeCreated: 1493063540
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Aquawax
+  fontNames:
+  - Aquawax
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
