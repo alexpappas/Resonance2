@@ -67,7 +67,8 @@ public class BigRotation : MonoBehaviour {
 		bool childrenActivated = true;
 		foreach (Transform child in this.transform) {
 			if (child.CompareTag ("resonator")) {
-				childrenActivated = childrenActivated && child.GetComponent<ResonatorScript> ().hasBeenActivated;
+				//childrenActivated = childrenActivated && child.GetComponent<ResonatorScript> ().hasBeenActivated;
+				childrenActivated = childrenActivated && child.GetComponent<Resonator3D> ().hasBeenActivated;
 			}
 		}
 
@@ -76,7 +77,8 @@ public class BigRotation : MonoBehaviour {
 
 			foreach (Transform child in this.transform) {
 				if (child.CompareTag ("resonator")) {
-					child.GetComponent<ResonatorScript> ().hasBeenActivated = false;
+					//child.GetComponent<ResonatorScript> ().hasBeenActivated = false;
+					child.GetComponent<Resonator3D> ().hasBeenActivated = false;
 				}
 			}
 		}
