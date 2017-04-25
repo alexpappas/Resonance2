@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour {
 	private int score_or_go_next = 0;
 
 	public bool resultsDisplaying;
+	private Dictionary<string, int> fewest_shots;
 
 
 	//score display
@@ -91,6 +92,28 @@ public class GameManager : MonoBehaviour {
 			"2 - 5",
 			"2 - 6"
 		};
+		fewest_shots = new Dictionary<string, int> ();
+		fewest_shots ["0 - 1"] = 1;
+		fewest_shots ["0 - 2"] = 3;
+		fewest_shots ["0 - 3"] = 1;
+		fewest_shots ["0 - 4"] = 2;
+		fewest_shots ["0 - 5"] = 3;
+		fewest_shots ["0 - 6"] = 2;
+		fewest_shots ["1 - 1"] = 3;
+		fewest_shots ["1 - 2"] = 3;
+		fewest_shots ["1 - 3"] = 3;
+		fewest_shots ["1 - 4"] = 3;
+		fewest_shots ["1 - 5"] = 3;
+		fewest_shots ["1 - 6"] = 1;
+		fewest_shots ["2 - 1"] = 3;
+		fewest_shots ["2 - 2"] = 2;
+		fewest_shots ["2 - 3"] = 3;
+
+
+
+
+
+			
 		levelComplete = false;
 		score_or_go_next = 0;
 		GameManager.number_of_shots = 0;
@@ -106,10 +129,12 @@ public class GameManager : MonoBehaviour {
 			count_of_resonators = 0;
 			count_of_activated_resonators = 0;
 			foreach (GameObject gameObj in GameObject.FindObjectsOfType<GameObject>()) {
-				if (gameObj.name.Contains ("resonator")) {
+				if (gameObj.name.Contains ("Resonator3D")) {
 					count_of_resonators++;
 				}
 			}
+			count_of_resonators--;
+
 
 			// Lol code
 			image1.enabled = false;
@@ -133,7 +158,6 @@ public class GameManager : MonoBehaviour {
 		if (number_of_shots <= 3) {
 			result [2] = 1;
 		}
-
 		if (count_of_activated_resonators == count_of_resonators) {
 			result [1] = 1;
 		}
