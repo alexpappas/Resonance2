@@ -103,7 +103,9 @@ public class PlayerScript3D : MonoBehaviour {
 
 		//	checks if player has hit spacebar... if so pulse...
 		if (Input.GetKeyDown (KeyCode.Space)) {
+			if (ani.GetCurrentAnimatorStateInfo (0).IsName ("Idle")) {
 				ExecutePulse ();
+			}
 		}
 
 		//	after the pulse has been sent, it grabs its number of sides from the GM 
