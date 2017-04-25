@@ -31,6 +31,20 @@ public class AudioManager : MonoBehaviour {
 	public AudioSource goalVoice;
 	public AudioSource goalTailVoice;
 
+	AudioClip[] ambiVoice1SoundsPent;
+	AudioClip[] ambiVoice1SoundsSqr;
+	AudioClip[] ambiVoice1SoundsTri;
+
+	AudioClip[] ambiVoice2SoundsPent;
+	AudioClip[] ambiVoice2SoundsSqr;
+	AudioClip[] ambiVoice2SoundsTri;
+
+	public AudioSource ambientVoice1;
+	public AudioSource ambientVoice2;
+	public AudioSource ambientVoice3;
+
+	int playerSides = 5;
+
 	void Awake () {
 		//	create singleton instance of AudioManager
 		if (instance == null) {
@@ -56,12 +70,16 @@ public class AudioManager : MonoBehaviour {
 
 	void Start () {
 		//print ("AM start");
+		InvokeRepeating("LowAmbient", 0, 7);
+		InvokeRepeating ("HighAmbient", 10, 13);
+		InvokeRepeating ("SpiceAmbient", 0, 17);
 	}
 		
 	//	sends player pulse information to Max
 	public void PlayerPulse(int x) {
 		if (audioON) {
-			//OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", "pulse " + x);
+
+			playerSides = x - 1;
 
 			if (x == 3) {
 				currentClip = 1 + Random.Range (0, (triangleSounds.Length - 1));
@@ -163,21 +181,71 @@ public class AudioManager : MonoBehaviour {
 		
 
 	void InitializeSounds() {
+		//	initialize pulse sounds
 		triangleSounds = Resources.LoadAll<AudioClip> ("Sounds/Triangle");
 		squareSounds = Resources.LoadAll<AudioClip> ("Sounds/Square");
 		pentagonSounds = Resources.LoadAll<AudioClip> ("Sounds/Pentagon");
 
 		resonatorVoiceCounter = 0;
 
+		//	initialize rotation sounds
 		triangleRotationSounds = Resources.LoadAll<AudioClip> ("Sounds/RotationTri");
 		squareRotationSounds = Resources.LoadAll<AudioClip> ("Sounds/RotationSqr");
 		pentagonRotationSounds = Resources.LoadAll<AudioClip> ("Sounds/RotationPent");
+
+		rotationVoiceCounter = 0;
+
+		//	initialize goal sounds
 		goalSounds = Resources.LoadAll<AudioClip> ("Sounds/Goal");
 		goalTailSounds = Resources.LoadAll<AudioClip> ("Sounds/GoalTail");
 
-		print (triangleRotationSounds.Length);
+		//	initialize ambient sounds
+		ambiVoice1SoundsPent = Resources.LoadAll<AudioClip> ("Sounds/Ambient/V1Pent");
+		ambiVoice1SoundsSqr = Resources.LoadAll<AudioClip> ("Sounds/Ambient/V1Sqr");
+		ambiVoice1SoundsTri = Resources.LoadAll<AudioClip> ("Sounds/Ambient/V1Tri");
 
-		rotationVoiceCounter = 0;
+		//	initialize ambient sounds
+		ambiVoice2SoundsPent = Resources.LoadAll<AudioClip> ("Sounds/Ambient/V2Pent");
+		ambiVoice2SoundsSqr = Resources.LoadAll<AudioClip> ("Sounds/Ambient/V2Sqr");
+		ambiVoice2SoundsTri = Resources.LoadAll<AudioClip> ("Sounds/Ambient/V2Tri");
+
 	}
 
+	void LowAmbient() {
+
+		if (playerSides == 5) {
+			currentClip = Random.Range (0, (ambiVoice1SoundsPent.Length - 1));
+			ambientVoice1.clip = ambiVoice1SoundsPent [currentClip];
+		} else if (playerSides == 4) {
+			currentClip = Random.Range (0, (ambiVoice1SoundsSqr.Length - 1));
+			ambientVoice1.clip = ambiVoice1SoundsSqr [currentClip];
+		} else if (playerSides == 3) {
+			currentClip = Random.Range (0, (ambiVoice1SoundsTri.Length - 1));
+			ambientVoice1.clip = ambiVoice1SoundsTri [currentClip];
+		}
+
+		ambientVoice1.Play ();
+
+	}
+
+	void HighAmbient() {
+		
+		if (playerSides == 5) {
+			currentClip = Random.Range (0, (ambiVoice2SoundsPent.Length - 1));
+			ambientVoice2.clip = ambiVoice2SoundsPent [currentClip];
+		} else if (playerSides == 4) {
+			currentClip = Random.Range (0, (ambiVoice2SoundsSqr.Length - 1));
+			ambientVoice2.clip = ambiVoice2SoundsSqr [currentClip];
+		} else if (playerSides == 3) {
+			currentClip = Random.Range (0, (ambiVoice2SoundsTri.Length - 1));
+			ambientVoice2.clip = ambiVoice2SoundsTri [currentClip];
+		}
+
+		ambientVoice2.Play ();
+	}
+
+	void SpiceAmbient() {
+		print ("la 3");
+
+	}
 }
