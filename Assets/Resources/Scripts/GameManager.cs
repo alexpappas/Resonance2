@@ -183,17 +183,17 @@ public class GameManager : MonoBehaviour {
 		Vector3 results = determine_results();
 		//print (results);
 		if (results [0] == 1.0f) {
-			Sprite new_sprite = Resources.Load<Sprite> ("Sprites/fancystar");
+			Sprite new_sprite = Resources.Load<Sprite> ("Sprites/newstar");
 			star1.sprite = new_sprite;
 			check1.enabled = true;
 		}
 		if (results [1] == 1.0f) {
-			Sprite new_sprite = Resources.Load<Sprite> ("Sprites/fancystar");
+			Sprite new_sprite = Resources.Load<Sprite> ("Sprites/newstar");
 			star2.sprite = new_sprite;
 			check2.enabled = true;
 		}
 		if (results [2] == 1.0f) {
-			Sprite new_sprite = Resources.Load<Sprite> ("Sprites/fancystar");
+			Sprite new_sprite = Resources.Load<Sprite> ("Sprites/newstar");
 			star3.sprite = new_sprite;
 			check3.enabled = true;
 		}
@@ -207,8 +207,11 @@ public class GameManager : MonoBehaviour {
 		goal2.enabled = true;
 		goal3.enabled = true;
 		star1.enabled = true;
+		star1.GetComponent<Animator> ().Play ("Start");
 		star2.enabled = true;
+		star2.GetComponent<Animator> ().Play ("Start");
 		star3.enabled = true;
+		star3.GetComponent<Animator> ().Play ("Start");
 		overlay.enabled = true;
 	}
 

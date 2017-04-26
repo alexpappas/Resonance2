@@ -219,7 +219,7 @@ public class AudioManager : MonoBehaviour {
 		} else if (playerSides == 4) {
 			currentClip = Random.Range (0, (ambiVoice1SoundsSqr.Length - 1));
 			ambientVoice1.clip = ambiVoice1SoundsSqr [currentClip];
-		} else if (playerSides == 3) {
+		} else {
 			currentClip = Random.Range (0, (ambiVoice1SoundsTri.Length - 1));
 			ambientVoice1.clip = ambiVoice1SoundsTri [currentClip];
 		}
@@ -236,7 +236,7 @@ public class AudioManager : MonoBehaviour {
 		} else if (playerSides == 4) {
 			currentClip = Random.Range (0, (ambiVoice2SoundsSqr.Length - 1));
 			ambientVoice2.clip = ambiVoice2SoundsSqr [currentClip];
-		} else if (playerSides == 3) {
+		} else {
 			currentClip = Random.Range (0, (ambiVoice2SoundsTri.Length - 1));
 			ambientVoice2.clip = ambiVoice2SoundsTri [currentClip];
 		}
@@ -245,7 +245,7 @@ public class AudioManager : MonoBehaviour {
 	}
 
 	void SpiceAmbient() {
-		print ("la 3");
+		//print ("la 3");
 
 	}
 }
