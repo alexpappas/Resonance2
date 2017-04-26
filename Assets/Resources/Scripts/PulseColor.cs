@@ -7,8 +7,7 @@ public class PulseColor : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		if (name == "Player's Pulse") {
-			this.GetComponent<TrailRenderer> ().startColor = Color.cyan;
-			this.GetComponent<TrailRenderer> ().endColor = Color.white;
+			this.GetComponent<TrailRenderer> ().startColor = new Vector4 (0.18f, 1, 1, 0.686f);
 		}
 	}
 
