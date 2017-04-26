@@ -50,6 +50,7 @@ public class Resonator3D : MonoBehaviour {
 
 	Material noResMaterial;
 	Material resMaterial;
+	Material noMoreResMaterial;
 
 	//	equal to the number of sides
 	//	for now
@@ -70,6 +71,7 @@ public class Resonator3D : MonoBehaviour {
 
 		noResMaterial = Resources.Load ("celShading/InactiveToon") as Material;
 		resMaterial = Resources.Load ("celShading/ActiveToon") as Material;
+		noMoreResMaterial = Resources.Load ("celShading/NoLongerActiveToon") as Material;
 		myRenderer.GetComponent<Renderer>().material = noResMaterial;
 
 		MAXPULSES = numSides;
@@ -179,7 +181,7 @@ public class Resonator3D : MonoBehaviour {
 		if (isResonating) {
 			myRenderer.GetComponent<Renderer>().material = resMaterial;
 		} else if (!isResonating && hasBeenActivated) {
-			myRenderer.GetComponent<Renderer>().material = noResMaterial;
+			myRenderer.GetComponent<Renderer>().material = noMoreResMaterial;
 			ani.Play ("Inactive");
 		} else if (!isResonating && !hasBeenActivated) {
 			myRenderer.GetComponent<Renderer>().material = noResMaterial;
