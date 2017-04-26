@@ -109,7 +109,7 @@ public class GameManager : MonoBehaviour {
 		fewest_shots ["2 - 2"] = 2;
 		fewest_shots ["2 - 3"] = 3;
 		fewest_shots ["2 - 4"] = 3;
-		fewest_shots ["2 - 3"] = 3;
+		fewest_shots ["2 - 5"] = 1;
 
 
 
@@ -157,7 +157,7 @@ public class GameManager : MonoBehaviour {
 
 	private Vector3 determine_results() {
 		Vector3 result = new Vector3(1, 0, 0);
-		if (number_of_shots <= 3) {
+		if (number_of_shots <= fewest_shots[SceneManager.GetActiveScene().name]) {
 			result [2] = 1;
 		}
 		if (count_of_activated_resonators == count_of_resonators) {
@@ -201,7 +201,12 @@ public class GameManager : MonoBehaviour {
 		}
 		goal1.text = "Level Completed";
 		goal2.text = "All Resonators Activated";
-		goal3.text = "3 shots or less";
+		int shots = fewest_shots [SceneManager.GetActiveScene ().name];
+		if (shots == 1) {
+			goal3.text = "Finished with " + shots.ToString () + " shot!";
+		} else {
+			goal3.text = shots.ToString () + " shots or less";
+		}
 		image1.enabled = true;
 		image2.enabled = true;
 		image3.enabled = true;
