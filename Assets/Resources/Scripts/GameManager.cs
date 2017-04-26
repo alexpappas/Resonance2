@@ -108,6 +108,8 @@ public class GameManager : MonoBehaviour {
 		fewest_shots ["2 - 1"] = 3;
 		fewest_shots ["2 - 2"] = 2;
 		fewest_shots ["2 - 3"] = 3;
+		fewest_shots ["2 - 4"] = 3;
+		fewest_shots ["2 - 3"] = 3;
 
 
 
