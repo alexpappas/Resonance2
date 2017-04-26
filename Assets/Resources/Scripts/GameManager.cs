@@ -95,7 +95,7 @@ public class GameManager : MonoBehaviour {
 		fewest_shots = new Dictionary<string, int> ();
 		fewest_shots ["0 - 1"] = 1;
 		fewest_shots ["0 - 2"] = 3;
-		fewest_shots ["0 - 3"] = 1;
+		fewest_shots ["0 - 3"] = 3;
 		fewest_shots ["0 - 4"] = 2;
 		fewest_shots ["0 - 5"] = 3;
 		fewest_shots ["0 - 6"] = 2;
