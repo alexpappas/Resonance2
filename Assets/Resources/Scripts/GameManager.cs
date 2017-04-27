@@ -292,6 +292,9 @@ public class GameManager : MonoBehaviour {
 			mainCam.GetComponent<Camera> ().orthographicSize = 4;
 		}
 
+		GameObject lights = Resources.Load ("prefabs/lights") as GameObject;
+		Instantiate (lights);
+
 	}
 
 	//	decreases the number of sides the player has by 1 (but lets the player do it and then gets the value back)

@@ -66,6 +66,7 @@
      <Compile Include="Assets\Resources\Scripts\PulseDetection.cs" />
      <Compile Include="Assets\Resources\Scripts\PulseDrag.cs" />
      <Compile Include="Assets\Resources\Scripts\PulseGroupScript.cs" />
+     <Compile Include="Assets\Resources\Scripts\PulseLight.cs" />
      <Compile Include="Assets\Resources\Scripts\PulseScript.cs" />
      <Compile Include="Assets\Resources\Scripts\Resonator3D.cs" />
      <Compile Include="Assets\Resources\Scripts\ResonatorScript.cs" />
