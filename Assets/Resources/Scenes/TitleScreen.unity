@@ -332,8 +332,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -409,7 +409,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: f7b459b7d76a44a86b8cc35e23b89c1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -470,23 +470,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1983094155856914, guid: 7daa9121a98e54e1daf7a4cfd4abe383, type: 2}
-      propertyPath: m_Name
-      value: GM
-      objectReference: {fileID: 0}
-    - target: {fileID: 1327845190054830, guid: 7daa9121a98e54e1daf7a4cfd4abe383, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1427058727060052, guid: 7daa9121a98e54e1daf7a4cfd4abe383, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1204959681080842, guid: 7daa9121a98e54e1daf7a4cfd4abe383, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1798812525858060, guid: 7daa9121a98e54e1daf7a4cfd4abe383, type: 2}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}

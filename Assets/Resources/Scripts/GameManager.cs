@@ -280,12 +280,17 @@ public class GameManager : MonoBehaviour {
 		} else if (instance != this) {
 			Destroy (gameObject);
 		}
-
-		//DontDestroyOnLoad (this.transform);
-
+			
 		//	player's number of sides 
 		//	start game with 5 sides
 		numSides = 5;
+
+		//	setting all cameras to orthographic so we don't have to do it manually
+		GameObject mainCam = GameObject.FindGameObjectWithTag ("MainCamera");
+		if (!mainCam.GetComponent<Camera> ().orthographic) {
+			mainCam.GetComponent<Camera> ().orthographic = true;
+			mainCam.GetComponent<Camera> ().orthographicSize = 4;
+		}
 
 	}
 
