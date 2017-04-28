@@ -12,7 +12,8 @@ public class GoalReached : MonoBehaviour {
 	public Animator ani;
 	public Renderer myRenderer;
 	public Renderer myInRenderer;
-	public Renderer myCenterRenderer;
+
+	public GameObject myParts;
 
 	Material resMaterial;
 	Material whiteMaterial;
@@ -22,6 +23,8 @@ public class GoalReached : MonoBehaviour {
 		resMaterial = Resources.Load ("celShading/ActiveToon") as Material;
 		whiteMaterial = Resources.Load ("celShading/GoalCenterToon") as Material;
 		blueMaterial = Resources.Load ("celShading/PlayerCenter") as Material;
+
+		Invoke ("ParticlesOn", 2.3f);
 
 	}
 
@@ -38,8 +41,6 @@ public class GoalReached : MonoBehaviour {
 
 			myRenderer.GetComponent<Renderer>().material = resMaterial;
 			myInRenderer.GetComponent<Renderer>().material = whiteMaterial;
-			myCenterRenderer.GetComponent<Renderer>().material = blueMaterial;
-
 
 			//	instantiates particles
 			Instantiate (gPart, transform.position, transform.rotation);
@@ -50,8 +51,12 @@ public class GoalReached : MonoBehaviour {
 			//	notifies AM
 			AudioManager.instance.GoalBubble ();
 		}
+			
+	}
 
-
+	void ParticlesOn() {
+	
+		myParts.SetActive(true);
 
 	}
 
