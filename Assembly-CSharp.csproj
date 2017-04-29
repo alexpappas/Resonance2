@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1EC4266B-582F-3FF1-EF4C-D46CC3F07322}</ProjectGuid>
+    <ProjectGuid>{667A8E4D-C8AA-5436-F64C-99E1A7F98835}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -72,6 +72,7 @@
      <Compile Include="Assets\Resources\Scripts\ResonatorScript.cs" />
      <Compile Include="Assets\WallScript.cs" />
      <Compile Include="Assets\buttons_control.cs" />
+     <Compile Include="Assets\loadLevel.cs" />
      <Compile Include="Assets\reset_pop_window.cs" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
      <None Include="Assets\Resources\celShading\CelShaderGradient.shader" />
