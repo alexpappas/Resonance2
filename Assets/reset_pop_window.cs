@@ -13,6 +13,8 @@ public class reset_pop_window : MonoBehaviour {
 	public static bool finished = false;
 	public Text stage_name;
 	private bool move = false;
+	public static bool player_has_won = false;
+	private bool fade_away = false;
 	// Use this for initialization
 	void Start () {
 		//tomove.GetComponent<RectTransform> ().localPosition = new Vector3 (432, -92, 0);
@@ -24,7 +26,8 @@ public class reset_pop_window : MonoBehaviour {
 	private float time_started = 0f;
 	// Update is called once per frame
 	void Update () {
-		if (out_of_moves && Input.GetKeyDown (KeyCode.Space) && !finished) {
+		
+		if (out_of_moves && !finished) {
 			move = true;
 		}
 
@@ -35,10 +38,25 @@ public class reset_pop_window : MonoBehaviour {
 			time_started += Time.deltaTime;
 		}
 
-		if (time_started > 2f) {
+		if (time_started > 3f && !finished) {
 			finished = true;
 			time_started = 0f;
 		}
+
+		if (finished && player_has_won) {
+			time_started += Time.deltaTime;
+			if (time_started > 2f) {
+				fade_away = true;
+			}
+
+		}
+
+		if (fade_away) {
+			Vector3 current_position = tomove.transform.position;
+			current_position.x = current_position.x + Time.deltaTime * 82f;
+			tomove.transform.position = current_position;
+		}
+
 		if (Input.GetMouseButton (0)) {
 			try {
 				GameObject a = EventSystem.current.currentSelectedGameObject;
