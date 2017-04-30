@@ -100,12 +100,12 @@ public class PlayerScript3D : MonoBehaviour {
 			movingLeft = false;
 
 		//	converts into rotation information
-		if (movingRight) {
+		if (movingRight && numSides >= 3) {
 			transform.Rotate (Vector3.back * speed * Time.deltaTime);
 			rotated_degrees += speed * Time.deltaTime;
 		}
 		
-		if (movingLeft) {
+		if (movingLeft && numSides >= 3) {
 			transform.Rotate (Vector3.forward * speed * Time.deltaTime);
 			rotated_degrees += speed * Time.deltaTime;
 		}

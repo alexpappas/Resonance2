@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour {
 	private int score_or_go_next = 0;
 
 	public bool resultsDisplaying;
-	private Dictionary<string, int> fewest_shots;
+	private Dictionary<string, float> fewest_shots;
 
 
 	//score display
@@ -92,24 +92,24 @@ public class GameManager : MonoBehaviour {
 			"2 - 5",
 			"2 - 6"
 		};
-		fewest_shots = new Dictionary<string, int> ();
-		fewest_shots ["0 - 1"] = 1;
-		fewest_shots ["0 - 2"] = 3;
-		fewest_shots ["0 - 3"] = 3;
-		fewest_shots ["0 - 4"] = 2;
-		fewest_shots ["0 - 5"] = 3;
-		fewest_shots ["0 - 6"] = 2;
-		fewest_shots ["1 - 1"] = 3;
-		fewest_shots ["1 - 2"] = 3;
-		fewest_shots ["1 - 3"] = 3;
-		fewest_shots ["1 - 4"] = 3;
-		fewest_shots ["1 - 5"] = 3;
-		fewest_shots ["1 - 6"] = 1;
-		fewest_shots ["2 - 1"] = 3;
-		fewest_shots ["2 - 2"] = 2;
-		fewest_shots ["2 - 3"] = 3;
-		fewest_shots ["2 - 4"] = 3;
-		fewest_shots ["2 - 5"] = 1;
+		fewest_shots = new Dictionary<string, float> ();
+		fewest_shots ["0 - 1"] = 360f;
+		fewest_shots ["0 - 2"] = 360f;
+		fewest_shots ["0 - 3"] = 360f;
+		fewest_shots ["0 - 4"] = 360f;
+		fewest_shots ["0 - 5"] = 360f;
+		fewest_shots ["0 - 6"] = 360f;
+		fewest_shots ["1 - 1"] = 180f;
+		fewest_shots ["1 - 2"] = 240f;
+		fewest_shots ["1 - 3"] = 240f;
+		fewest_shots ["1 - 4"] = 360f;
+		fewest_shots ["1 - 5"] = 360f;
+		fewest_shots ["1 - 6"] = 360f;
+		fewest_shots ["2 - 1"] = 360f;
+		fewest_shots ["2 - 2"] = 360f;
+		fewest_shots ["2 - 3"] = 360f;
+		fewest_shots ["2 - 4"] = 360f;
+		fewest_shots ["2 - 5"] = 360f;
 
 
 
@@ -157,7 +157,7 @@ public class GameManager : MonoBehaviour {
 
 	private Vector3 determine_results() {
 		Vector3 result = new Vector3(1, 0, 0);
-		if (number_of_shots <= fewest_shots[SceneManager.GetActiveScene().name]) {
+		if (PlayerScript3D.rotated_degrees <= fewest_shots[SceneManager.GetActiveScene().name]) {
 			result [2] = 1;
 		}
 		if (count_of_activated_resonators == count_of_resonators) {
@@ -201,12 +201,9 @@ public class GameManager : MonoBehaviour {
 		}
 		goal1.text = "Level Completed";
 		goal2.text = "All Resonators Activated";
-		int shots = fewest_shots [SceneManager.GetActiveScene ().name];
-		if (shots == 1) {
-			goal3.text = "Finished with " + shots.ToString () + " shot!";
-		} else {
-			goal3.text = shots.ToString () + " shots or less";
-		}
+		float degrees = fewest_shots [SceneManager.GetActiveScene ().name];
+		goal3.text = "Rotated less than " + degrees.ToString () + " degrees!\nYou moved " + PlayerScript3D.rotated_degrees.ToString() + " degrees";
+
 		image1.enabled = true;
 		image2.enabled = true;
 		image3.enabled = true;

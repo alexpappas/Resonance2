@@ -38,14 +38,14 @@ public class reset_pop_window : MonoBehaviour {
 			time_started += Time.deltaTime;
 		}
 
-		if (time_started > 3f && !finished) {
+		if (time_started > 2f && !finished) {
 			finished = true;
 			time_started = 0f;
 		}
 
 		if (finished && player_has_won) {
 			time_started += Time.deltaTime;
-			if (time_started > 2f) {
+			if (time_started > 2.5f) {
 				fade_away = true;
 			}
 
