@@ -7,22 +7,19 @@ public class loadLevel : MonoBehaviour {
 
 	public string sceneName;
 
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-
 	void OnTriggerEnter2D(Collider2D coll) {
 
 		print ("Loading Scene with name " + sceneName);
+		//SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+
+		Invoke ("LevelSelected", 2.5f);
+
+	}
+
+	void LevelSelected() {
+	
 		SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
 
 	}
+
 }
