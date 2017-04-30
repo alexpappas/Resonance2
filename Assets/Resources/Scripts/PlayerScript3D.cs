@@ -21,6 +21,7 @@ using System.Collections;
 public class PlayerScript3D : MonoBehaviour {
 
 	public static PlayerScript3D instance = null;
+	public static float rotated_degrees = 0f;
 
 	//	we can play with these 3 until we are happy!!!
 	//	rotation speed
@@ -28,6 +29,7 @@ public class PlayerScript3D : MonoBehaviour {
 
 	//	number of sides
 	private int numSides = 5;
+	public static bool goal_is_reached = false;
 	//	force for pulses
 	float pulseForce = 10;
 
@@ -67,6 +69,8 @@ public class PlayerScript3D : MonoBehaviour {
 	void Awake()
 	{
 		numSides = 5;
+		PlayerScript3D.goal_is_reached = false;
+
 		//	set the instance value to self.
 		if (instance == null) {
 			instance = this;
@@ -96,13 +100,18 @@ public class PlayerScript3D : MonoBehaviour {
 			movingLeft = false;
 
 		//	converts into rotation information
-		if (movingRight)
-			transform.Rotate(Vector3.back * speed*Time.deltaTime);
-		if (movingLeft)
-			transform.Rotate(Vector3.forward * speed*Time.deltaTime);
+		if (movingRight) {
+			transform.Rotate (Vector3.back * speed * Time.deltaTime);
+			rotated_degrees += speed * Time.deltaTime;
+		}
+		
+		if (movingLeft) {
+			transform.Rotate (Vector3.forward * speed * Time.deltaTime);
+			rotated_degrees += speed * Time.deltaTime;
+		}
 
 		//	checks if player has hit spacebar... if so pulse...
-		if (Input.GetKeyDown (KeyCode.Space)) {
+		if (Input.GetKeyDown (KeyCode.Space) && !goal_is_reached) {
 			if (ani.GetCurrentAnimatorStateInfo (0).IsName ("Idle")) {
 				ExecutePulse ();
 			}

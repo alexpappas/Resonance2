@@ -31,6 +31,7 @@ public class GoalReached : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D coll) {
 
 		if (!isActive) {
+			PlayerScript3D.goal_is_reached = true;
 			reset_pop_window.player_has_won = true;
 			isActive = true;
 			reset_pop_window.out_of_moves = false;

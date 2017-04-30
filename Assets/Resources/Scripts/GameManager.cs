@@ -224,8 +224,11 @@ public class GameManager : MonoBehaviour {
 
 	public void restart_button_click(){
 		GameManager.number_of_shots = 0;
+		PlayerScript3D.rotated_degrees = 0f;
 		reset_pop_window.finished = false;
 		reset_pop_window.out_of_moves = false;
+		reset_pop_window.player_has_won = false;
+		PlayerScript3D.goal_is_reached = false;
 		Application.LoadLevel(Application.loadedLevel);
 
 	}
@@ -235,6 +238,9 @@ public class GameManager : MonoBehaviour {
 		GameManager.number_of_shots = 0;
 		reset_pop_window.finished = false;
 		reset_pop_window.out_of_moves = false;
+		reset_pop_window.player_has_won = false;
+		PlayerScript3D.goal_is_reached = false;
+
 	}
 
 	public void pause_button_click(){
@@ -260,8 +266,11 @@ public class GameManager : MonoBehaviour {
 				}
 			}
 			GameManager.number_of_shots = 0;
+			PlayerScript3D.rotated_degrees = 0f;
 			reset_pop_window.finished = false;
 			reset_pop_window.out_of_moves = false;
+			reset_pop_window.player_has_won = false;
+
 			SceneManager.LoadScene(stages[next], LoadSceneMode.Single);
 
 			levelComplete = false;
@@ -335,7 +344,6 @@ public class GameManager : MonoBehaviour {
 		GameObject nextButton = GameObject.Find ("Next");
 		//nextButton.SetActive (true);
 
-		print ("Goal has been reached");
 		goalReached = true;
 
 		//get stuck in this routing for 5 seconds;
