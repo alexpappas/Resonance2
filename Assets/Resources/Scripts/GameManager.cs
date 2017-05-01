@@ -39,13 +39,17 @@ public class GameManager : MonoBehaviour {
 	public Image image2;
 	public Image image3;
 
+	public Image nextButtonLevelComp;
+	public Image resetButtonLevelComp;
+	public Image menuButtonLevelComp;
+
 	public Image star1;
 	public Image star2;
 	public Image star3;
 
-	public Image check1;
-	public Image check2;
-	public Image check3;
+	//public Image check1;
+	//public Image check2;
+	//public Image check3;
 
 	public Image overlay;
 
@@ -147,9 +151,12 @@ public class GameManager : MonoBehaviour {
 			star1.enabled = false;
 			star2.enabled = false;
 			star3.enabled = false;
-			check1.enabled = false;
-			check2.enabled = false;
-			check3.enabled = false;
+			//check1.enabled = false;
+			//check2.enabled = false;
+			//check3.enabled = false;
+			nextButtonLevelComp.enabled = false;
+			resetButtonLevelComp.enabled = false;
+			menuButtonLevelComp.enabled = false;
 			overlay.enabled = false;
 		}
 	}
@@ -200,17 +207,17 @@ public class GameManager : MonoBehaviour {
 		if (results [0] == 1.0f) {
 			Sprite new_sprite = Resources.Load<Sprite> ("Sprites/newstar");
 			star1.sprite = new_sprite;
-			check1.enabled = true;
+			//check1.enabled = true;
 		}
 		if (results [1] == 1.0f) {
 			Sprite new_sprite = Resources.Load<Sprite> ("Sprites/newstar");
 			star2.sprite = new_sprite;
-			check2.enabled = true;
+			//check2.enabled = true;
 		}
 		if (results [2] == 1.0f) {
 			Sprite new_sprite = Resources.Load<Sprite> ("Sprites/newstar");
 			star3.sprite = new_sprite;
-			check3.enabled = true;
+			//check3.enabled = true;
 		}
 		goal1.text = "Level Completed";
 		goal2.text = "All Resonators Activated";
@@ -230,6 +237,11 @@ public class GameManager : MonoBehaviour {
 		star3.enabled = true;
 		star3.GetComponent<Animator> ().Play ("Start");
 		overlay.enabled = true;
+
+		nextButtonLevelComp.enabled = true;
+		resetButtonLevelComp.enabled = true;
+		menuButtonLevelComp.enabled = true;
+
 	}
 
 	public void restart_button_click(){
