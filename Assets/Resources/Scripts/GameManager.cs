@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour {
 	//public Image check3;
 
 	public Image overlay;
+	public Image overlay2;
 
 	public Button next_button;
 
@@ -158,6 +159,7 @@ public class GameManager : MonoBehaviour {
 			resetButtonLevelComp.enabled = false;
 			menuButtonLevelComp.enabled = false;
 			overlay.enabled = false;
+			overlay2.enabled = false;
 		}
 	}
 
@@ -237,6 +239,7 @@ public class GameManager : MonoBehaviour {
 		star3.enabled = true;
 		star3.GetComponent<Animator> ().Play ("Start");
 		overlay.enabled = true;
+		overlay2.enabled = true;
 
 		nextButtonLevelComp.enabled = true;
 		resetButtonLevelComp.enabled = true;
