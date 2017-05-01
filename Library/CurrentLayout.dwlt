@@ -365,28 +365,28 @@ MonoBehaviour:
     height: 363
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8294ffff
-    m_LastClickedID: -27518
-    m_ExpandedIDs: 9894ffff2696ffffe0c6ffffa2cbffffbce4ffffdcfbffff00000000
+    m_SelectedIDs: 12c2feff
+    m_LastClickedID: -81390
+    m_ExpandedIDs: 04c2feff66c2feffc8c2feffeac3feff4cc4feff52c4feff8ec7feffc4ccfeff32d6feff5ee8feff1aecfeffd4effeff9cf1feff62f5feff2ef7feff22a6ffffe4acffff46adffff4aadffffa8adffff2cafffff32afffffeab2ffffa2b6ffff68b8ffff22bcffffdabfffff96c4ffffb8c8ffffd8ccffffdecdffffb6ddfffff0e2fffface6ffff66eaffff0aebffff60f3ffffdef7ffffdcfbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: GOAL(2 - 5) (1)
-      m_OriginalName: GOAL(2 - 5) (1)
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -27518
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
   m_ExpandedScenes:
-  - Level_Select_Rotation
+  - Level_Select_Symmetry
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -536,10 +536,10 @@ MonoBehaviour:
   m_LastProjectPath: /Users/adriencogny/OneDrive/Documents/NYU Poly/Senior Year/S_2017/Game_Design/FinalProject/Resonance2
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 95}
-    m_SelectedIDs: b0280000
-    m_LastClickedID: 10416
-    m_ExpandedIDs: 000000002c25000052270000b8280000c8280000d428000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 107}
+    m_SelectedIDs: c0280000
+    m_LastClickedID: 10432
+    m_ExpandedIDs: 000000002c2500005c270000c8280000d8280000e428000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -567,7 +567,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002c25000052270000b8280000c8280000d4280000
+    m_ExpandedIDs: 000000002c2500005c270000c8280000d8280000e4280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -594,7 +594,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 9429000006c7010094280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -611,7 +611,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -619,7 +619,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 87}
+    m_ScrollPosition: {x: 0, y: 180}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 222
 --- !u!114 &17
@@ -674,7 +674,7 @@ MonoBehaviour:
     y: 94
     width: 275
     height: 634
-  m_ScrollPosition: {x: 0, y: 0}
+  m_ScrollPosition: {x: 0, y: 247.95508}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 160

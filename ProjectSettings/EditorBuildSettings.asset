@@ -65,3 +65,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Resources/Scenes/Rotating_Level_Select.unity
     guid: 5e34726f7b7c94b309b339fa330db301
+  - enabled: 1
+    path: Assets/Resources/Scenes/Level_Select_Tutorial.unity
+    guid: 808b848bd66774ed6a7ac241fdd4ebe1

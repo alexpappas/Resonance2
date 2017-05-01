@@ -73,8 +73,6 @@ public class GameManager : MonoBehaviour {
 
 		stages = new string[] {
 			"TitleScreen",
-			"Rotating_Level_Select",
-			/*
 			"0 - 1",
 			"0 - 2",
 			"0 - 3",
@@ -85,7 +83,7 @@ public class GameManager : MonoBehaviour {
 			"1 - 2",
 			"1 - 3",
 			"1 - 4",
-			"1 - 5",*/
+			"1 - 5",
 			"2 - 1",
 			"2 - 2", 
 			"2 - 3",

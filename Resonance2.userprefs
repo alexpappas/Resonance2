@@ -1,9 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/routeStarsToLevel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Scripts/GameManager.cs">
     <Files>
-      <File FileName="Assets/Resources/Scripts/GameManager.cs" Line="76" Column="28" />
-      <File FileName="Assets/routeStarsToLevel.cs" Line="33" Column="1" />
+      <File FileName="Assets/Resources/Scripts/GameManager.cs" Line="75" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
