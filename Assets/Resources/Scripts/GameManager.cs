@@ -73,6 +73,7 @@ public class GameManager : MonoBehaviour {
 
 		stages = new string[] {
 			"TitleScreen",
+			/*
 			"0 - 1",
 			"0 - 2",
 			"0 - 3",
@@ -83,8 +84,7 @@ public class GameManager : MonoBehaviour {
 			"1 - 2",
 			"1 - 3",
 			"1 - 4",
-			"1 - 5",
-			"1 - 6",
+			"1 - 5",*/
 			"2 - 1",
 			"2 - 2", 
 			"2 - 3",
@@ -172,6 +172,20 @@ public class GameManager : MonoBehaviour {
 			buttons_control.data[SceneManager.GetActiveScene ().name] = result;
 		}
 		buttons_control.data[SceneManager.GetActiveScene ().name] = result;
+
+
+		if (routeStarsToLevel.data == null) {
+			print ("Route stars to level is null, populating with zeros"); 
+			routeStarsToLevel.data = new Dictionary<string, Vector3> ();
+			for (int i = 1; i < stages.Length; i++) {
+				routeStarsToLevel.data [stages [i]] = new Vector3 (0, 0, 0);
+			}
+			routeStarsToLevel.data[SceneManager.GetActiveScene ().name] = result;
+		}
+		print ("Sending stars to level selector");
+		routeStarsToLevel.data [SceneManager.GetActiveScene ().name] = result;
+		print ("result = ");
+		print (result);
 		return result;
 	}
 
