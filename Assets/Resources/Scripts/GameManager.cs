@@ -73,6 +73,7 @@ public class GameManager : MonoBehaviour {
 
 		stages = new string[] {
 			"TitleScreen",
+			"Rotating_Level_Select",
 			/*
 			"0 - 1",
 			"0 - 2",

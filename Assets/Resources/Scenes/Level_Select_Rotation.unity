@@ -161,7 +161,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1282987691764046, guid: 6a80d141268a14a1a9437729932d7046, type: 2}
       propertyPath: m_Name
-      value: GOAL(2-5)
+      value: GOAL(2 - 5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a80d141268a14a1a9437729932d7046, type: 2}
@@ -455,7 +455,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1282987691764046, guid: 6a80d141268a14a1a9437729932d7046, type: 2}
       propertyPath: m_Name
-      value: GOAL(2-1)
+      value: GOAL(2 - 1)
       objectReference: {fileID: 0}
     - target: {fileID: 4912979677882480, guid: 6a80d141268a14a1a9437729932d7046, type: 2}
       propertyPath: m_RootOrder
@@ -3790,7 +3790,7 @@ GameObject:
   - component: {fileID: 540600873}
   - component: {fileID: 540600870}
   m_Layer: 0
-  m_Name: GOAL(2-2)
+  m_Name: GOAL(2 - 2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14078,7 +14078,7 @@ GameObject:
   - component: {fileID: 2015750473}
   - component: {fileID: 2015750472}
   m_Layer: 0
-  m_Name: GOAL(2-3)
+  m_Name: GOAL(2 - 3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
