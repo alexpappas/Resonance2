@@ -18,9 +18,9 @@
 using UnityEngine;
 using System.Collections;
 
-public class PlayerScript3D : MonoBehaviour {
+public class LevelSelectPlayer : MonoBehaviour {
 
-	public static PlayerScript3D instance = null;
+	public static LevelSelectPlayer instance = null;
 	public static float rotated_degrees = 0f;
 
 	//	we can play with these 3 until we are happy!!!
@@ -69,8 +69,8 @@ public class PlayerScript3D : MonoBehaviour {
 	void Awake()
 	{
 		numSides = 5;
-		PlayerScript3D.goal_is_reached = false;
-		PlayerScript3D.rotated_degrees = 0f;
+		LevelSelectPlayer.goal_is_reached = false;
+		LevelSelectPlayer.rotated_degrees = 0f;
 
 		//	set the instance value to self.
 		if (instance == null) {
@@ -88,7 +88,7 @@ public class PlayerScript3D : MonoBehaviour {
 		if (ani.GetCurrentAnimatorStateInfo (0).IsName ("LoseSide")) {
 			SetSprite ();
 		}
-			
+
 		//	gets user inputs, right arrow is clockwise rotation of player, left is counterclockwise...
 		if (Input.GetKeyDown (KeyCode.RightArrow))
 			movingRight = true;
@@ -105,7 +105,7 @@ public class PlayerScript3D : MonoBehaviour {
 			transform.Rotate (Vector3.back * speed * Time.deltaTime);
 			rotated_degrees += speed * Time.deltaTime;
 		}
-		
+
 		if (movingLeft && numSides >= 3) {
 			transform.Rotate (Vector3.forward * speed * Time.deltaTime);
 			rotated_degrees += speed * Time.deltaTime;
@@ -146,7 +146,6 @@ public class PlayerScript3D : MonoBehaviour {
 			}
 			ani.Play ("Pulse");
 			AudioManager.instance.PlayerPulse (numSides);
-			numSides = numSides - 1;
 			//GameManager.instance.DecrementNumSides ();
 
 		}
@@ -158,7 +157,6 @@ public class PlayerScript3D : MonoBehaviour {
 			}
 			ani.Play ("Pulse");
 			AudioManager.instance.PlayerPulse (numSides);
-			numSides = numSides - 1;
 			//GameManager.instance.DecrementNumSides ();
 
 		}
@@ -170,7 +168,6 @@ public class PlayerScript3D : MonoBehaviour {
 			}
 			ani.Play ("Pulse");
 			AudioManager.instance.PlayerPulse (numSides);
-			numSides = numSides - 1;
 			//GameManager.instance.DecrementNumSides ();
 
 		}
@@ -182,7 +179,6 @@ public class PlayerScript3D : MonoBehaviour {
 			}
 			ani.Play ("NoSides");
 			AudioManager.instance.PlayerPulse (numSides);
-			numSides = numSides - 1;
 			reset_pop_window.out_of_moves = true;
 
 			//GameManager.instance.DecrementNumSides ();
