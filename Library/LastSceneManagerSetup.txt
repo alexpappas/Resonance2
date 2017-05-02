@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Resources/Scenes/2 - 5.unity
+- path: Assets/Resources/Scenes/Level_Select_Symmetry.unity
   isLoaded: 1
   isActive: 1
