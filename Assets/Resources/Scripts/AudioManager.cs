@@ -212,10 +212,6 @@ public class AudioManager : MonoBehaviour {
 		goalSounds = Resources.LoadAll<AudioClip> ("Sounds/Goal");
 		goalTailSounds = Resources.LoadAll<AudioClip> ("Sounds/GoalChord");
 
-		print (goalTailSounds[0]);
-		print (goalTailSounds[1]);
-		print (goalTailSounds[2]);
-
 		//	initialize ambient sounds
 		ambiVoice1SoundsPent = Resources.LoadAll<AudioClip> ("Sounds/Ambient/V1Pent");
 		ambiVoice1SoundsSqr = Resources.LoadAll<AudioClip> ("Sounds/Ambient/V1Sqr");
