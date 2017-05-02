@@ -263,6 +263,21 @@ Prefab:
       propertyPath: m_Name
       value: Player3D
       objectReference: {fileID: 0}
+    - target: {fileID: 50089048259898708, guid: 855313b385ca148fe9e320e0f4ec08bc,
+        type: 2}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 50649355608663934, guid: 855313b385ca148fe9e320e0f4ec08bc,
+        type: 2}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 50422966609096288, guid: 855313b385ca148fe9e320e0f4ec08bc,
+        type: 2}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 855313b385ca148fe9e320e0f4ec08bc, type: 2}
   m_IsPrefabParent: 0
