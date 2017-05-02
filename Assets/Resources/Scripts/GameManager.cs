@@ -298,6 +298,8 @@ public class GameManager : MonoBehaviour {
 
 			SceneManager.LoadScene(stages[next], LoadSceneMode.Single);
 
+			AudioManager.instance.NextScene ();
+
 			levelComplete = false;
 			score_or_go_next = 0;
 

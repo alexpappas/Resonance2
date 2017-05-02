@@ -31,6 +31,8 @@ public class AudioManager : MonoBehaviour {
 	public AudioSource goalVoice;
 	public AudioSource goalTailVoice;
 
+	public AudioSource wallVoice;
+
 	AudioClip[] ambiVoice1SoundsPent;
 	AudioClip[] ambiVoice1SoundsSqr;
 	AudioClip[] ambiVoice1SoundsTri;
@@ -38,6 +40,7 @@ public class AudioManager : MonoBehaviour {
 	AudioClip[] ambiVoice2SoundsPent;
 	AudioClip[] ambiVoice2SoundsSqr;
 	AudioClip[] ambiVoice2SoundsTri;
+	AudioClip[] ambiVoiceSpice;
 
 	public AudioSource ambientVoice1;
 	public AudioSource ambientVoice2;
@@ -70,9 +73,9 @@ public class AudioManager : MonoBehaviour {
 
 	void Start () {
 		//print ("AM start");
-		InvokeRepeating("LowAmbient", 0, 7);
-		InvokeRepeating ("HighAmbient", 10, 13);
-		InvokeRepeating ("SpiceAmbient", 0, 17);
+		InvokeRepeating("LowAmbient", 5, 7);
+		InvokeRepeating ("HighAmbient", 9, 13);
+		InvokeRepeating ("SpiceAmbient", 5, 17);
 	}
 		
 	//	sends player pulse information to Max
@@ -80,6 +83,9 @@ public class AudioManager : MonoBehaviour {
 		if (audioON) {
 
 			playerSides = x - 1;
+
+			print ("playersides is " + playerSides);
+
 
 			if (x == 3) {
 				currentClip = 1 + Random.Range (0, (triangleSounds.Length - 1));
@@ -154,8 +160,15 @@ public class AudioManager : MonoBehaviour {
 			//goalVoice.clip = goalSounds [currentClip];
 			//goalVoice.Play ();
 
-			currentClip = Random.Range (0, (goalSounds.Length - 1));
-			goalTailVoice.clip = goalTailSounds[0];
+			//currentClip = Random.Range (0, (goalSounds.Length - 1));
+			//goalTailVoice.clip = goalTailSounds[0];
+			if (playerSides == 5) {
+				goalTailVoice.clip = goalTailSounds[0];
+			} else if (playerSides == 4) {
+				goalTailVoice.clip = goalTailSounds[1];
+			} else {
+				goalTailVoice.clip = goalTailSounds[2];
+			}
 			goalTailVoice.Play ();
 
 		}
@@ -165,8 +178,8 @@ public class AudioManager : MonoBehaviour {
 		if (audioON) {
 			//	OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", "bubble");
 			currentClip = Random.Range (0, (goalSounds.Length - 1));
-			goalVoice.clip = goalSounds [currentClip];
-			goalVoice.Play ();
+			wallVoice.clip = goalSounds [currentClip];
+			wallVoice.Play ();
 
 		}
 	}
@@ -197,7 +210,11 @@ public class AudioManager : MonoBehaviour {
 
 		//	initialize goal sounds
 		goalSounds = Resources.LoadAll<AudioClip> ("Sounds/Goal");
-		goalTailSounds = Resources.LoadAll<AudioClip> ("Sounds/GoalTail");
+		goalTailSounds = Resources.LoadAll<AudioClip> ("Sounds/GoalChord");
+
+		print (goalTailSounds[0]);
+		print (goalTailSounds[1]);
+		print (goalTailSounds[2]);
 
 		//	initialize ambient sounds
 		ambiVoice1SoundsPent = Resources.LoadAll<AudioClip> ("Sounds/Ambient/V1Pent");
@@ -208,6 +225,8 @@ public class AudioManager : MonoBehaviour {
 		ambiVoice2SoundsPent = Resources.LoadAll<AudioClip> ("Sounds/Ambient/V2Pent");
 		ambiVoice2SoundsSqr = Resources.LoadAll<AudioClip> ("Sounds/Ambient/V2Sqr");
 		ambiVoice2SoundsTri = Resources.LoadAll<AudioClip> ("Sounds/Ambient/V2Tri");
+
+		ambiVoiceSpice = Resources.LoadAll<AudioClip> ("Sounds/Ambient/Spice");
 
 	}
 
@@ -245,7 +264,15 @@ public class AudioManager : MonoBehaviour {
 	}
 
 	void SpiceAmbient() {
-		//print ("la 3");
 
+		currentClip = Random.Range (0, (ambiVoiceSpice.Length - 1));
+		ambientVoice3.clip = ambiVoiceSpice [currentClip];
+
+		ambientVoice3.Play ();
+
+	}
+
+	public void NextScene() {
+		playerSides = 5;
 	}
 }

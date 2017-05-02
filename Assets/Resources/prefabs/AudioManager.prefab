@@ -106,6 +106,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1253103009885050
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4238042951005918}
+  - component: {fileID: 82868665974120138}
+  m_Layer: 0
+  m_Name: GoalTail
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1277042996584526
 GameObject:
   m_ObjectHideFlags: 1
@@ -258,7 +274,7 @@ GameObject:
   - component: {fileID: 4290224473253956}
   - component: {fileID: 82329041500154880}
   m_Layer: 0
-  m_Name: GoalTail
+  m_Name: WallVoice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -324,7 +340,7 @@ Transform:
   - {fileID: 4604241524760984}
   - {fileID: 4770956841736372}
   m_Father: {fileID: 4514315681164980}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4214541011067196
 Transform:
@@ -337,6 +353,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4911260897379272}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4238042951005918
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1253103009885050}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.36446238, y: 0.3252458, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4514315681164980}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4239957245234418
@@ -363,7 +392,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4514315681164980}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4329339372514678
 Transform:
@@ -390,6 +419,7 @@ Transform:
   m_Children:
   - {fileID: 4649683828065946}
   - {fileID: 4792351817116158}
+  - {fileID: 4238042951005918}
   - {fileID: 4290224473253956}
   - {fileID: 4183450637743760}
   - {fileID: 4616606663625276}
@@ -425,7 +455,7 @@ Transform:
   - {fileID: 4968660486324118}
   - {fileID: 4239957245234418}
   m_Father: {fileID: 4514315681164980}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4649683828065946
 Transform:
@@ -532,7 +562,7 @@ Transform:
   - {fileID: 4056140903095978}
   - {fileID: 4214541011067196}
   m_Father: {fileID: 4514315681164980}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4968660486324118
 Transform:
@@ -719,7 +749,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243041272609868724, guid: 0c66f348ea0144c47a6b4ada0f96d88a,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 26aa81b67704d45a5b2ec019f476469e, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -962,8 +992,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243423953850330018, guid: 0c66f348ea0144c47a6b4ada0f96d88a,
     type: 2}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: d6f248e18e47e46f08bed9ae6144ca3b, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1519,6 +1549,87 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!82 &82868665974120138
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1253103009885050}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243041272609868724, guid: 0c66f348ea0144c47a6b4ada0f96d88a,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 0a7a008bbf18e43e0a744730347f3df3, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!82 &82873917654004460
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1610,8 +1721,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243062483368881052, guid: 0c66f348ea0144c47a6b4ada0f96d88a,
     type: 2}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: e3d1adab1099d48f7a6c5ea913134d53, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1705,7 +1816,8 @@ MonoBehaviour:
   - {fileID: 82196344998153978}
   playerVoice: {fileID: 82918806764906576}
   goalVoice: {fileID: 82542652937803442}
-  goalTailVoice: {fileID: 82329041500154880}
+  goalTailVoice: {fileID: 82868665974120138}
+  wallVoice: {fileID: 82329041500154880}
   ambientVoice1: {fileID: 82606964106836988}
   ambientVoice2: {fileID: 82486089136941910}
   ambientVoice3: {fileID: 82572264877119260}
