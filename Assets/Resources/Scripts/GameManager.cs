@@ -259,7 +259,8 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void menu_button_click(){
-		SceneManager.LoadScene("Level_Select", LoadSceneMode.Single);
+		//SceneManager.LoadScene("Level_Select", LoadSceneMode.Single);
+		SceneManager.LoadScene("Rotating_Level_Select", LoadSceneMode.Single);
 		GameManager.number_of_shots = 0;
 		reset_pop_window.finished = false;
 		reset_pop_window.out_of_moves = false;
