@@ -224,7 +224,7 @@ public class GameManager : MonoBehaviour {
 		goal1.text = "Level Completed";
 		goal2.text = "All Resonators Activated";
 		float degrees = fewest_shots [SceneManager.GetActiveScene ().name];
-		goal3.text = "Rotated less than " + degrees.ToString () + " degrees!\nYou moved " + PlayerScript3D.rotated_degrees.ToString() + " degrees";
+		goal3.text = "Rotated less than " + degrees.ToString () + " degrees!\nYou moved: " + ((int)PlayerScript3D.rotated_degrees).ToString() + " degrees";
 
 		image1.enabled = true;
 		image2.enabled = true;
