@@ -68,3 +68,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Resources/Scenes/Level_Select_Tutorial.unity
     guid: 808b848bd66774ed6a7ac241fdd4ebe1
+  - enabled: 1
+    path: Assets/Resources/Scenes/Level_Select_Symmetry.unity
+    guid: 98703ec0af4eb4d5bae7006810add1b8
