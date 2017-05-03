@@ -96,25 +96,25 @@ public class GameManager : MonoBehaviour {
 			"2 - 5",
 			"2 - 6"
 		};
+
 		fewest_shots = new Dictionary<string, float> ();
 		fewest_shots ["0 - 1"] = 360f;
-		fewest_shots ["0 - 2"] = 360f;
-		fewest_shots ["0 - 3"] = 360f;
-		fewest_shots ["0 - 4"] = 360f;
-		fewest_shots ["0 - 5"] = 360f;
-		fewest_shots ["0 - 6"] = 360f;
-		fewest_shots ["1 - 1"] = 180f;
-		fewest_shots ["1 - 2"] = 240f;
-		fewest_shots ["1 - 3"] = 240f;
-		fewest_shots ["1 - 4"] = 360f;
-		fewest_shots ["1 - 5"] = 360f;
-		fewest_shots ["1 - 6"] = 360f;
+		fewest_shots ["0 - 2"] = 270f;
+		fewest_shots ["0 - 3"] = 180f;
+		fewest_shots ["0 - 4"] = 90f;
+		fewest_shots ["0 - 5"] = 100f;
+		fewest_shots ["0 - 6"] = 60f;
+		fewest_shots ["1 - 1"] = 90f;	//	could be lower like 60
+		fewest_shots ["1 - 2"] = 45f;
+		fewest_shots ["1 - 3"] = 30f;
+		fewest_shots ["1 - 4"] = 30f;
+		fewest_shots ["1 - 5"] = 30f;
 		fewest_shots ["2 - 1"] = 360f;
 		fewest_shots ["2 - 2"] = 360f;
 		fewest_shots ["2 - 3"] = 360f;
 		fewest_shots ["2 - 4"] = 360f;
 		fewest_shots ["2 - 5"] = 360f;
-
+		fewest_shots ["2 - 6"] = 360f;
 
 
 
