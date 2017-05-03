@@ -116,6 +116,9 @@ public class PlayerScript3D : MonoBehaviour {
 			if (ani.GetCurrentAnimatorStateInfo (0).IsName ("Idle")) {
 				ExecutePulse ();
 			}
+			else if (numSides < 3) {
+				reset_pop_window.out_of_moves = true;
+			}
 		}
 
 		//	after the pulse has been sent, it grabs its number of sides from the GM 
@@ -141,49 +144,46 @@ public class PlayerScript3D : MonoBehaviour {
 		if (numSides >= 6) {
 			GameManager.number_of_shots++;
 			GameObject s = Instantiate (hexPulse, transform.position, transform.rotation);
-			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
-				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
+			for (int i = 0; i < s.GetComponentsInChildren<Transform> ().Length; i++) {
+				s.GetComponentsInChildren<Transform> () [i].name = "Player's Pulse";
 			}
 			ani.Play ("Pulse");
 			AudioManager.instance.PlayerPulse (numSides);
 			numSides = numSides - 1;
 			//GameManager.instance.DecrementNumSides ();
 
-		}
-		else if (numSides == 5) {
+		} else if (numSides == 5) {
 			GameManager.number_of_shots++;
 			GameObject s = Instantiate (pentPulse, transform.position, transform.rotation);
-			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
-				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
+			for (int i = 0; i < s.GetComponentsInChildren<Transform> ().Length; i++) {
+				s.GetComponentsInChildren<Transform> () [i].name = "Player's Pulse";
 			}
 			ani.Play ("Pulse");
 			AudioManager.instance.PlayerPulse (numSides);
 			numSides = numSides - 1;
 			//GameManager.instance.DecrementNumSides ();
 
-		}
-		else if (numSides == 4) {
+		} else if (numSides == 4) {
 			GameManager.number_of_shots++;
 			GameObject s = Instantiate (sqrPulse, transform.position, transform.rotation);
-			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
-				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
+			for (int i = 0; i < s.GetComponentsInChildren<Transform> ().Length; i++) {
+				s.GetComponentsInChildren<Transform> () [i].name = "Player's Pulse";
 			}
 			ani.Play ("Pulse");
 			AudioManager.instance.PlayerPulse (numSides);
 			numSides = numSides - 1;
 			//GameManager.instance.DecrementNumSides ();
 
-		}
-		else if (numSides == 3) {
+		} else if (numSides == 3) {
 			GameManager.number_of_shots++;
 			GameObject s = Instantiate (triPulse, transform.position, transform.rotation);
-			for(int i = 0; i < s.GetComponentsInChildren<Transform>().Length; i++) {
-				s.GetComponentsInChildren<Transform>()[i].name = "Player's Pulse";
+			for (int i = 0; i < s.GetComponentsInChildren<Transform> ().Length; i++) {
+				s.GetComponentsInChildren<Transform> () [i].name = "Player's Pulse";
 			}
 			ani.Play ("NoSides");
 			AudioManager.instance.PlayerPulse (numSides);
 			numSides = numSides - 1;
-			reset_pop_window.out_of_moves = true;
+
 
 			//GameManager.instance.DecrementNumSides ();
 
