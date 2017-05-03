@@ -109,12 +109,12 @@ public class GameManager : MonoBehaviour {
 		fewest_shots ["1 - 3"] = 30f;
 		fewest_shots ["1 - 4"] = 30f;
 		fewest_shots ["1 - 5"] = 30f;
-		fewest_shots ["2 - 1"] = 360f;
-		fewest_shots ["2 - 2"] = 360f;
-		fewest_shots ["2 - 3"] = 360f;
-		fewest_shots ["2 - 4"] = 360f;
-		fewest_shots ["2 - 5"] = 360f;
-		fewest_shots ["2 - 6"] = 360f;
+		fewest_shots ["2 - 1"] = 150f;
+		fewest_shots ["2 - 2"] = 100f; // can be 0
+		fewest_shots ["2 - 3"] = 180f;
+		fewest_shots ["2 - 4"] = 120f;  // can be 19
+		fewest_shots ["2 - 5"] = 100f;  // can be 0
+		fewest_shots ["2 - 6"] = 150f;  // can be 45
 
 
 
