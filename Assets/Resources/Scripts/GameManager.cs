@@ -70,8 +70,6 @@ public class GameManager : MonoBehaviour {
 	float timeBeforeScore = 0.0f;
 	float maxTimeBeforeScore = 3.0f;
 
-
-
 	void Start () {
 		timeBeforeScore = 0;
 		Instantiate(Resources.Load("prefabs/AudioManager"));
@@ -273,6 +271,8 @@ public class GameManager : MonoBehaviour {
 		reset_pop_window.player_has_won = false;
 		PlayerScript3D.goal_is_reached = false;
 
+		//AudioManager.instance.MenuMode ();
+		AudioManager.instance.NextScene("Rotating_Level_Select");
 	}
 
 	public void pause_button_click(){
@@ -305,11 +305,10 @@ public class GameManager : MonoBehaviour {
 
 			SceneManager.LoadScene(stages[next], LoadSceneMode.Single);
 
-			AudioManager.instance.NextScene ();
-
 			levelComplete = false;
 			score_or_go_next = 0;
 
+			AudioManager.instance.NextScene (stages[next]);
 
 			resultsDisplaying = false;
 		}

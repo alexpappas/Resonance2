@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour {
 
@@ -51,6 +52,7 @@ public class AudioManager : MonoBehaviour {
 
 	public AudioMixerSnapshot normal;
 	public AudioMixerSnapshot goalReached;
+	public AudioMixerSnapshot menu;
 
 	void Awake () {
 		//	create singleton instance of AudioManager
@@ -172,7 +174,7 @@ public class AudioManager : MonoBehaviour {
 				goalTailVoice.clip = goalTailSounds[2];
 			}
 
-			goalReached.TransitionTo (0.1f);
+			goalReached.TransitionTo (0.5f);
 			goalTailVoice.Play ();
 
 		}
@@ -272,9 +274,28 @@ public class AudioManager : MonoBehaviour {
 
 	}
 
-	public void NextScene() {
+	public void NextScene(string name) {
 		playerSides = 5;
-		normal.TransitionTo (0.1f);
+		//normal.TransitionTo (1f);
 		print("next");
+		Scene currentScene = SceneManager.GetActiveScene ();
+		if (name == "Level_Select_Rotation") {
+			menu.TransitionTo (0.5f);
+		} else if (name == "Level_Select_Symmetry") {
+			menu.TransitionTo (0.5f);
+		} else if (name == "Level_Select_Tutorial") {
+			menu.TransitionTo (0.5f);
+		} else if (name == "Rotating_Level_Select") {
+			menu.TransitionTo (0.5f);
+		} else {
+			normal.TransitionTo (0.5f);
+		}
+			
+	}
+
+	public void MenuMode() {
+		playerSides = 5;
+		menu.TransitionTo (0.5f);
+		print ("menu");
 	}
 }

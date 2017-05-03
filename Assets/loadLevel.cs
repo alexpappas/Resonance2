@@ -19,7 +19,7 @@ public class loadLevel : MonoBehaviour {
 	void LevelSelected() {
 	
 		SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
-
+		AudioManager.instance.NextScene (sceneName);
 	}
 
 }
