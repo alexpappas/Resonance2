@@ -119,7 +119,6 @@ public class BigRotation : MonoBehaviour {
 			for (int i = 0; i < lines.Length; i++) {
 				lines [i].GetComponent<Renderer> ().material.color = old_color;
 			}
-
             isRotating = false;
 		}
 	}

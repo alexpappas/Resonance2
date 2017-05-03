@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour {
 
@@ -48,6 +49,9 @@ public class AudioManager : MonoBehaviour {
 
 	int playerSides = 5;
 
+	public AudioMixerSnapshot normal;
+	public AudioMixerSnapshot goalReached;
+
 	void Awake () {
 		//	create singleton instance of AudioManager
 		if (instance == null) {
@@ -83,9 +87,6 @@ public class AudioManager : MonoBehaviour {
 		if (audioON) {
 
 			playerSides = x - 1;
-
-			print ("playersides is " + playerSides);
-
 
 			if (x == 3) {
 				currentClip = 1 + Random.Range (0, (triangleSounds.Length - 1));
@@ -155,6 +156,7 @@ public class AudioManager : MonoBehaviour {
 	//	if goal has been achieved sends value of 8
 	public void GoalBubble() {
 		if (audioON) {
+
 		//	OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", "bubble");
 			//currentClip = Random.Range (0, (goalSounds.Length - 1));
 			//goalVoice.clip = goalSounds [currentClip];
@@ -169,6 +171,8 @@ public class AudioManager : MonoBehaviour {
 			} else {
 				goalTailVoice.clip = goalTailSounds[2];
 			}
+
+			goalReached.TransitionTo (0.1f);
 			goalTailVoice.Play ();
 
 		}
@@ -270,5 +274,7 @@ public class AudioManager : MonoBehaviour {
 
 	public void NextScene() {
 		playerSides = 5;
+		normal.TransitionTo (0.1f);
+		print("next");
 	}
 }

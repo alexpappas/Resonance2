@@ -1821,3 +1821,6 @@ MonoBehaviour:
   ambientVoice1: {fileID: 82606964106836988}
   ambientVoice2: {fileID: 82486089136941910}
   ambientVoice3: {fileID: 82572264877119260}
+  normal: {fileID: 24500006, guid: 0c66f348ea0144c47a6b4ada0f96d88a, type: 2}
+  goalReached: {fileID: 245459611140954110, guid: 0c66f348ea0144c47a6b4ada0f96d88a,
+    type: 2}
