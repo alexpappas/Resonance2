@@ -181,17 +181,13 @@ public class GameManager : MonoBehaviour {
 
 
 		if (routeStarsToLevel.data == null) {
-			print ("Route stars to level is null, populating with zeros"); 
 			routeStarsToLevel.data = new Dictionary<string, Vector3> ();
 			for (int i = 1; i < stages.Length; i++) {
 				routeStarsToLevel.data [stages [i]] = new Vector3 (0, 0, 0);
 			}
 			routeStarsToLevel.data[SceneManager.GetActiveScene ().name] = result;
 		}
-		print ("Sending stars to level selector");
 		routeStarsToLevel.data [SceneManager.GetActiveScene ().name] = result;
-		print ("result = ");
-		print (result);
 		return result;
 	}
 
@@ -264,12 +260,13 @@ public class GameManager : MonoBehaviour {
 
 	public void menu_button_click(){
 		//SceneManager.LoadScene("Level_Select", LoadSceneMode.Single);
-		SceneManager.LoadScene("Rotating_Level_Select", LoadSceneMode.Single);
 		GameManager.number_of_shots = 0;
 		reset_pop_window.finished = false;
 		reset_pop_window.out_of_moves = false;
 		reset_pop_window.player_has_won = false;
 		PlayerScript3D.goal_is_reached = false;
+		SceneManager.LoadScene("Rotating_Level_Select", LoadSceneMode.Single);
+
 
 		//AudioManager.instance.MenuMode ();
 		AudioManager.instance.NextScene("Rotating_Level_Select");

@@ -72,6 +72,7 @@ public class PlayerScript3D : MonoBehaviour {
 	{
 		numSides = 5;
 		PlayerScript3D.goal_is_reached = false;
+		reset_pop_window.finished = false;
 		PlayerScript3D.rotated_degrees = 0f;
 
 		//	set the instance value to self.

@@ -50,12 +50,7 @@ public class reset_pop_window : MonoBehaviour {
 			}
 
 		}
-
-		if (fade_away) {
-			Vector3 current_position = tomove.transform.position;
-			current_position.x = current_position.x + Time.deltaTime * 82f;
-			tomove.transform.position = current_position;
-		}
+			
 
 		if (Input.GetMouseButton (0)) {
 			try {
