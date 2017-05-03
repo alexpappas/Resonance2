@@ -17,6 +17,8 @@
 
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerScript3D : MonoBehaviour {
 
@@ -186,6 +188,14 @@ public class PlayerScript3D : MonoBehaviour {
 
 
 			//GameManager.instance.DecrementNumSides ();
+
+		}
+		if (SceneManager.GetActiveScene ().name == "Level_Select_Rotation" || SceneManager.GetActiveScene ().name == "Level_Select_Symmetry" || SceneManager.GetActiveScene ().name == "Level_Select_Tutorial" || SceneManager.GetActiveScene ().name == "Rotating_Level_Select") {
+
+			// Count how many resonators for game goal
+			print("In level select, and just pulsed, going to add a side now");
+			numSides = numSides + 1;
+
 
 		}
 
