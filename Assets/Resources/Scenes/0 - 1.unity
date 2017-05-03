@@ -526,7 +526,12 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'use the left and right arrow keys to aim
 
-    and the spacebar to pulse'
+    and the spacebar to pulse
+
+
+    if you run out of pulses
+
+    press the spacebar again to reset'
 --- !u!222 &1516382644
 CanvasRenderer:
   m_ObjectHideFlags: 0
